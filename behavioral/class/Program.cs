@@ -6,6 +6,9 @@ namespace PracticingDesignPatterns.Behavioral.Class.Template
     {
       var meatSandwich = new MeatSandwich();
       meatSandwich.Make();
+
+      var veggieSandwich = new VeggieSandwich();
+      veggieSandwich.Make();
     }
   }
 }
