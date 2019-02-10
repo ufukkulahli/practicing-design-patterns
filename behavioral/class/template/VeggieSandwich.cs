@@ -1,4 +1,6 @@
-namespace PracticingDesignPatterns.Behavioral.Class.Template
+using System;
+
+namespace practicing_design_patterns.behavioral.@class.template
 {
   public class VeggieSandwich : Sandwich
   {

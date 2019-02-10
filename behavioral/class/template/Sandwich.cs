@@ -1,20 +1,22 @@
-namespace PracticingDesignPatterns.Behavioral.Class.Template
+using System;
+
+namespace practicing_design_patterns.behavioral.@class.template
 {
   public abstract class Sandwich
   {
-    protected Sandwich LayBread()
+    private Sandwich LayBread()
     {
       Console.WriteLine("Laying down the bread,");
       return this;
     }
 
-    protected Sandwich AddLettuce()
+    private Sandwich AddLettuce()
     {
       Console.WriteLine("Adding some lettuce,");
       return this;
     }
 
-    protected Sandwich AddSauces()
+    private Sandwich AddSauces()
     {
       Console.WriteLine("Adding some sauces,");
       return this;
@@ -22,7 +24,7 @@ namespace PracticingDesignPatterns.Behavioral.Class.Template
 
     protected abstract Sandwich AddMainIngredient();
 
-    protected Sandwich Make()
+    protected internal Sandwich Make()
     {
       Console.WriteLine("Making sandwich is in progress...");
       return this
