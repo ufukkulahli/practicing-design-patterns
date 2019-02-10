@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace practicing_design_patterns.behavioral.@class.template
+namespace practicing_design_patterns.behavioral.@class
 {
   public class UnitTests
   {
