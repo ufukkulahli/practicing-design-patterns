@@ -6,3 +6,5 @@ Concerned with
  relationships,
  responsibilities
 between objects either compile time or runtime.
+
+* Template method
