@@ -10,7 +10,7 @@ namespace practicing_design_patterns.behavioral.@class
       Console.WriteLine("Comparing items for descended sorting...");
     }
     
-    protected IEnumerable<string> GetItems()
+    protected internal IEnumerable<string> GetItems()
     {
       return new List<string>{"C","B","A"};
     }
