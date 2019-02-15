@@ -1,4 +1,4 @@
-﻿namespace practicing_design_patterns.behavioral.@object.visitor.tourist_example
+﻿namespace practicing_design_patterns.behavioral.@object.visitor
 {
   internal interface IVisitor
   {

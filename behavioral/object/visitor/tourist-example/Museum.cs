@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace practicing_design_patterns.behavioral.@object.visitor.tourist_example
+namespace practicing_design_patterns.behavioral.@object.visitor
 {
   internal class Museum : IVisitee
   {

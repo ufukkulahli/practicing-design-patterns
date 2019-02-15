@@ -8,3 +8,4 @@ Concerned with
 between objects either compile time or runtime.
 
 * Template method
+* Visitor
