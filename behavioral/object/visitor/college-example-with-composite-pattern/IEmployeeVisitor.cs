@@ -1,5 +1,3 @@
-using System;
-
 namespace practicing_design_patterns.behavioral.@object.visitor
 {
   public interface IEmployeeVisitor

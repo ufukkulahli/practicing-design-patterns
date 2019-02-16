@@ -1,21 +1,22 @@
+// Employee who has subordinates
+// We use separate "employee" type who does not have subordinates but is a IEmployee
+
 using System;
 using System.Collections.Generic;
 
 namespace practicing_design_patterns.behavioral.@object.visitor
 {
-  // Employee who has subordinates
-  // We use separate "employee" type who does not have subordinates but is a IEmployee
   public class CompositeEmployee : IEmployee
   {
-    internal readonly Name name;
-    internal readonly Department department;
-    internal protected readonly int YearsOfExperience;
+    internal readonly Name Name;
+    internal readonly Department Department;
+    internal readonly YearsOfExperience YearsOfExperience;
     private readonly IList<IEmployee> subordinates;
 
-    public CompositeEmployee(Name name, Department department, int yearsOfExperience)
+    public CompositeEmployee(Name name, Department department, YearsOfExperience yearsOfExperience)
     {
-      this.name = name;
-      this.department = department;
+      this.Name = name;
+      this.Department = department;
       this.YearsOfExperience = yearsOfExperience;
       this.subordinates = new List<IEmployee>();
     }
@@ -26,12 +27,17 @@ namespace practicing_design_patterns.behavioral.@object.visitor
 
     public void PrintStructures()
     {
-      Console.WriteLine
-      ("\t" + this.name + "works in" + this.department + "Experience :" + this.YearsOfExperience + "years");
-      foreach (IEmployee employee in this.subordinates)
+      PrintDetail();
+      foreach (var employee in this.subordinates)
       {
         employee.PrintStructures();
       }
+    }
+
+    private void PrintDetail()
+    {
+      Console.WriteLine
+      ("\t" + this.Name + "works in" + this.Department + "Experience :" + this.YearsOfExperience + "years");
     }
 
     public void Accept(IEmployeeVisitor visitor)
