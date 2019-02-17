@@ -13,7 +13,12 @@ namespace practicing_design_patterns.behavioral.@object.visitor
     internal readonly YearsOfExperience YearsOfExperience;
     private readonly IList<IEmployee> subordinates;
 
-    public CompositeEmployee(Name name, Department department, YearsOfExperience yearsOfExperience)
+    public CompositeEmployee
+    (
+      Name name,
+      Department department,
+      YearsOfExperience yearsOfExperience
+    )
     {
       this.Name = name;
       this.Department = department;
@@ -28,7 +33,7 @@ namespace practicing_design_patterns.behavioral.@object.visitor
     public void PrintStructures()
     {
       PrintDetail();
-      foreach (var employee in this.subordinates)
+      foreach (IEmployee employee in this.subordinates)
       {
         employee.PrintStructures();
       }
@@ -37,12 +42,9 @@ namespace practicing_design_patterns.behavioral.@object.visitor
     private void PrintDetail()
     {
       Console.WriteLine
-      ("\t" + this.Name + "works in" + this.Department + "Experience :" + this.YearsOfExperience + "years");
+        ($"\t{this.Name}works in{this.Department}Experience :{this.YearsOfExperience}years");
     }
 
-    public void Accept(IEmployeeVisitor visitor)
-    {
-      visitor.VisitCompositeElement(this);
-    }
+    public void Accept(IEmployeeVisitor visitor) => visitor.VisitCompositeElement(this);
   }
 }

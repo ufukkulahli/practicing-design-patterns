@@ -23,12 +23,9 @@ namespace practicing_design_patterns.behavioral.@object.visitor
     public void PrintStructures()
     {
       Console.WriteLine
-        ("\t\t" + this.Name + "works in" + this.Department + "Experience :" + this.YearsOfExperience + "years");
+        ($"\t\t{this.Name}works in{this.Department}Experience :{this.YearsOfExperience}years");
     }
 
-    public void Accept(IEmployeeVisitor visitor)
-    {
-      visitor.VisitLeafNode(this);
-    }
+    public void Accept(IEmployeeVisitor visitor) => visitor.VisitLeafNode(this);
   }
 }

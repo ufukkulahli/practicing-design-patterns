@@ -1,4 +1,4 @@
-using static System.Console;
+using System;
 
 namespace practicing_design_patterns.behavioral.@object.visitor
 {
@@ -10,10 +10,9 @@ namespace practicing_design_patterns.behavioral.@object.visitor
         (employee, employee.YearsOfExperience.IsEligibleForPromotionOver15Years());
     }
 
-    //We'll promote them if experience is greater than 15 years
     private void PrintPromotionStatus(CompositeEmployee employee, bool eligibleForPromotion)
     {
-      WriteLine
+      Console.WriteLine
         ($"\t\t{employee.Name}from{employee.Department}is eligible for promotion?{eligibleForPromotion}");
     }
 
@@ -23,10 +22,9 @@ namespace practicing_design_patterns.behavioral.@object.visitor
         (employee, employee.YearsOfExperience.IsEligibleForPromotionOver12Years());
     }
 
-    //We'll promote them if experience is greater than 12 years
     private void PrintPromotionStatus(Employee employee, bool eligibleForPromotion)
     {
-      WriteLine
+      Console.WriteLine
         ($"\t\t{employee.Name}from{employee.Department}is eligible for promotion?{eligibleForPromotion}");
     }
   }
