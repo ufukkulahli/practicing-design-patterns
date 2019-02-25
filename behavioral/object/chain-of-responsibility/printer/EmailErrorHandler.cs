@@ -1,5 +1,3 @@
-using System;
-
 namespace practicing_design_patterns.behavioral.@object.printer
 {
   public class EmailErrorHandler : IReceiver
@@ -16,7 +14,7 @@ namespace practicing_design_patterns.behavioral.@object.printer
     {
       if (message.Text.Contains("Fax"))
       {
-        Console.WriteLine
+        PrinterUnitTests.TestOutputHelper.WriteLine
           ("EmailErrorHandler processed {0} priority issue: {1}", message.Priority, message.Text);
         this.IsHandled = true;
         return true;

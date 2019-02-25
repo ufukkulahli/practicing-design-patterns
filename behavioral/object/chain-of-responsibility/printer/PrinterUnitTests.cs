@@ -1,9 +1,17 @@
 using Xunit;
+using Xunit.Abstractions;
 
 namespace practicing_design_patterns.behavioral.@object.printer
 {
   public class PrinterUnitTests
   {
+    public static ITestOutputHelper TestOutputHelper;
+
+    public PrinterUnitTests(ITestOutputHelper helper)
+    {
+      TestOutputHelper = helper;
+    }
+
     [Fact]
     public void ErrorHandlers_Should_Handle_AllErrors()
     {
@@ -14,8 +22,8 @@ namespace practicing_design_patterns.behavioral.@object.printer
       var message4 = new Message(Priority.High, "Fax is not reaching destination.");
 
       var emailHandler = new EmailErrorHandler(null);
-      var faxhandler = new FaxErrorHandler(emailHandler);
-      var issueRaiser = new IssueRaiser(faxhandler);
+      var faxHandler = new FaxErrorHandler(emailHandler);
+      var issueRaiser = new IssueRaiser(faxHandler);
 
       // Act
       issueRaiser.Raise(message1);
@@ -25,7 +33,7 @@ namespace practicing_design_patterns.behavioral.@object.printer
 
       // Assert
       Assert.True(emailHandler.IsHandled);
-      Assert.True(faxhandler.IsHandled);
+      Assert.True(faxHandler.IsHandled);
     }
   }
 }
