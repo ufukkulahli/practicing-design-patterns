@@ -2,7 +2,7 @@ namespace practicing_design_patterns.behavioral.@object.logger
 {
   public abstract class Logger
   {
-    protected readonly LogLevel LogMask;
+    protected internal readonly LogLevel LogMask;
     protected Logger Next;
 
     protected Logger(LogLevel logMask)

@@ -13,13 +13,12 @@ namespace practicing_design_patterns.behavioral.@object.logger
     }
 
     [Fact]
-    public void Test()
+    public void LoggersShouldHandleMessagesByTheirLogLevelMask()
     {
       // Arrange
-      Logger logger, logger1, logger2;
-      logger = new ConsoleLogger(LogLevel.All);
-      logger1 = logger.SetNext(new EmailLogger(LogLevel.FunctionalMessage | LogLevel.FunctionalError));
-      logger2 = logger1.SetNext(new FileLogger(LogLevel.Warning | LogLevel.Error));
+      var logger = new ConsoleLogger(LogLevel.All);
+      var logger1 = logger.SetNext(new EmailLogger(LogLevel.FunctionalMessage | LogLevel.FunctionalError));
+      var logger2 = logger1.SetNext(new FileLogger(LogLevel.Warning | LogLevel.Error));
 
       // Act
       logger.Message("This message will be handled by consoleLogger", LogLevel.Debug);
@@ -30,6 +29,15 @@ namespace practicing_design_patterns.behavioral.@object.logger
 
       logger.Message("This message will be handled by consoleLogger and emailLogger", LogLevel.FunctionalError);
       logger.Message("This message will be handled by consoleLogger and emailLogger", LogLevel.FunctionalMessage);
+      
+      // Assert
+      Assert.IsType<ConsoleLogger>(logger);
+      Assert.IsType<EmailLogger>(logger1);
+      Assert.IsType<FileLogger>(logger2);
+      
+      Assert.True(logger.LogMask == LogLevel.All);
+      Assert.True(logger1.LogMask == (LogLevel.FunctionalMessage | LogLevel.FunctionalError));
+      Assert.True(logger2.LogMask == (LogLevel.Warning | LogLevel.Error));
     }
   }
 }
