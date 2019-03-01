@@ -9,3 +9,4 @@ between objects either compile time or runtime.
 
 * Template method
 * Visitor
+* Chain of responsibility
