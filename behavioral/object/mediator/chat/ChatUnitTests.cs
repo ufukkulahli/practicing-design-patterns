@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -27,7 +26,7 @@ namespace practicing_design_patterns.behavioral.@object.mediator.chat
       mediator.Register(jane);
       mediator.Register(sam);
       mediator.DisplayDetails();
-      
+
       // Act
       john.Send("Hi Jane!");
       jane.Send("Hi John! What's up?");
@@ -35,7 +34,10 @@ namespace practicing_design_patterns.behavioral.@object.mediator.chat
       unknown.Send("Hello people!");
 
       // Assert
-      // TODO: ADD ASSERTS
+      Assert.Contains(john, mediator.GetChatterList());
+      Assert.Contains(jane, mediator.GetChatterList());
+      Assert.Contains(sam, mediator.GetChatterList());
+      Assert.DoesNotContain(unknown, mediator.GetChatterList());
     }
   }
 }

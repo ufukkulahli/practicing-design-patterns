@@ -7,6 +7,11 @@ namespace practicing_design_patterns.behavioral.@object.mediator.chat
   {
     private ICollection<Friend> participants = new List<Friend>();
 
+    public IReadOnlyCollection<Friend> GetChatterList()
+    {
+      return this.participants as IReadOnlyCollection<Friend>;
+    }
+
     public void Register(Friend friend)
     {
       this.participants.Add(friend);
@@ -22,7 +27,8 @@ namespace practicing_design_patterns.behavioral.@object.mediator.chat
      }
 
      ChatUnitTests.OutputHelper.WriteLine
-      ("An outsider named {0} trying to send message: {1}", friend.Name, message);
+      ("An outsider named {0} trying to send message: {1}, Time: {2}",
+       friend.Name, message, DateTime.Now);
     }
 
     public void DisplayDetails()
