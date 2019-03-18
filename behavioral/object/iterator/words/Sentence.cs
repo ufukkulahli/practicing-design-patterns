@@ -32,7 +32,7 @@ namespace practicing_design_patterns.behavioral.@object.iterator.words
 
       public string Next()
       {
-        throw new System.NotImplementedException();
+        return this.HasNext() ? this.sentence.words[this.index++] : null;
       }
     }
   }
