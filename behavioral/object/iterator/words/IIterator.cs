@@ -1,6 +1,6 @@
 namespace practicing_design_patterns.behavioral.@object.iterator.words
 {
-  public interface Iterator<out T>
+  public interface IIterator<out T>
   {
     bool HasNext();
     T Next();
