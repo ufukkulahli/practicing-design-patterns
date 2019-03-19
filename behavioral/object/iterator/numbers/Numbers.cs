@@ -9,7 +9,7 @@ namespace practicing_design_patterns.behavioral.@object.iterator.numbers
 
     public Numbers(params int[] numbers)
     {
-      this.numbers.AddRange(numbers);
+      this.numbers = new List<int>(numbers);
     }
 
     public IEnumerator<int> GetEnumerator()
@@ -30,7 +30,7 @@ namespace practicing_design_patterns.behavioral.@object.iterator.numbers
       public NumbersEnumerator(List<int> numbers)
       {
         this.numbers = numbers;
-        this.index = -1;
+        this.index = 0;
       }
 
       public bool MoveNext()
