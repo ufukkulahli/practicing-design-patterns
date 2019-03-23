@@ -11,3 +11,4 @@ between objects either compile time or runtime.
 * Visitor
 * Chain of responsibility
 * Mediator
+* Iterator
