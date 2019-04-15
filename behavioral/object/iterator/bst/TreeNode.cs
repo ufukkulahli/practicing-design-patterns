@@ -4,7 +4,7 @@ namespace practicing_design_patterns.behavioral.@object.iterator.bst
 {
   public class TreeNode<T> where T : IComparable<T>
   {
-    private T value;
+    internal T value;
     internal TreeNode<T> Left { get; private set; }
     internal TreeNode<T> Right { get; private set; }
 

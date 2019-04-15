@@ -25,9 +25,10 @@ namespace practicing_design_patterns.behavioral.@object.iterator.bst
 
     private TreeNode<T> Next()
     {
-      var first = this.pathStack.First.Value;
-      this.PushPathToNextSmallest(first);
-      return first;
+      var next = this.pathStack.First.Value;
+      this.pathStack.RemoveFirst();
+      this.PushPathToNextSmallest(next.Right);
+      return next;
     }
     
     public bool MoveNext()
