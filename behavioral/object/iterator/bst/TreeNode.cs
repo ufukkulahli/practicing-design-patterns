@@ -5,8 +5,8 @@ namespace practicing_design_patterns.behavioral.@object.iterator.bst
   public class TreeNode<T> where T : IComparable<T>
   {
     private T value;
-    private TreeNode<T> Left;
-    private TreeNode<T> Right;
+    internal TreeNode<T> Left { get; private set; }
+    internal TreeNode<T> Right { get; private set; }
 
     public TreeNode(T value)
     {
