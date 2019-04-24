@@ -5,7 +5,7 @@ namespace practicing_design_patterns.structural.@object.decorator.borrowing
 {
   class Borrowable : Decorator
   {
-    protected IEnumerable<string> borrowers = new List<string>();
+    protected List<string> borrowers = new List<string>();
     public Borrowable(LibraryItem libraryItem):base(libraryItem){}
     public void BorrowItem(string name)
     {

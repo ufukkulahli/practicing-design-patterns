@@ -2,7 +2,7 @@ namespace practicing_design_patterns.structural.@object.decorator.borrowing
 {
   abstract class LibraryItem
   {
-    protected int NumberOfCopies;
+    protected internal int NumberOfCopies;
     public abstract void Display();
   }
 }
