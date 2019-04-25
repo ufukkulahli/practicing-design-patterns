@@ -5,7 +5,7 @@ namespace practicing_design_patterns.structural.@object.decorator.borrowing
     readonly string author;
     readonly string title;
 
-    Book(string author, string title, int numberOfCopies)
+    internal Book(string author, string title, int numberOfCopies)
     {
       this.author=author;
       this.title=title;
@@ -14,11 +14,10 @@ namespace practicing_design_patterns.structural.@object.decorator.borrowing
 
     public override void Display()
     {
-     //TODO:
-     //Borrowing.TestOutputHelper.WriteLine("Book:");
-     //Borrowing.TestOutputHelper.WriteLine("Author: {0}", this.author);
-     //Borrowing.TestOutputHelper.WriteLine("Title: {0}", this.title);
-     //Borrowing.TestOutputHelper.WriteLine("Number of copies: {0}", base.NumberOfCopies);
+     BorrowingUnitTests.TestOutputHelper.WriteLine("Book:");
+     BorrowingUnitTests.TestOutputHelper.WriteLine("Author: {0}", this.author);
+     BorrowingUnitTests.TestOutputHelper.WriteLine("Title: {0}", this.title);
+     BorrowingUnitTests.TestOutputHelper.WriteLine("Number of copies: {0}", base.NumberOfCopies);
     }
   }
 }

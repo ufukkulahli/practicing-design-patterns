@@ -22,7 +22,7 @@ namespace practicing_design_patterns.structural.@object.decorator.borrowing
       base.Display();
       foreach(var borrower in borrowers)
       {
-        //Borrowing.TestOutputHelper.WriteLine("Video:");
+        BorrowingUnitTests.TestOutputHelper.WriteLine("Video:");
       }
     }
   }
