@@ -5,3 +5,4 @@ bin
 practicing-design-patterns.sln.DotSettings.user
 .vs
 *.swp
+.vscode
