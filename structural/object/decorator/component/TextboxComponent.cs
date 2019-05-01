@@ -1,11 +1,11 @@
 namespace practicing_design_patterns.structural.@object.decorator.component
 {
-  class Textbox : IComponent
+  class TextboxComponent : IComponent
   {
     readonly int width;
     readonly int height;
 
-    Textbox(int width, int height)
+    TextboxComponent(int width, int height)
     {
       this.width = width;
       this.height = height;
