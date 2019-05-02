@@ -1,14 +1,26 @@
+using Xunit;
+using Xunit.Abstractions;
+
 namespace practicing_design_patterns.structural.@object.decorator.component
 {
   public class ComponentUnitTests
   {
-    public void Test()
+    public static ITestOutputHelper OutputHelper;
+    public ComponentUnitTests(ITestOutputHelper outputHelper)
+      =>OutputHelper=outputHelper;
+
+    [Fact]
+    public void ShouldCreateComponentWithDecorators()
     {
-    // Arrange
+      // Arrange
+      var component =
+        new ScrollDecorator(new BorderDecorator(new TextboxComponent(20,5)));
 
-    // Act
+      // Act
+      component.Draw();
 
-    // Assert
+      // Assert
+      Assert.IsType<BorderDecorator>(component.component);
     }
   }
 }

@@ -5,7 +5,7 @@ namespace practicing_design_patterns.structural.@object.decorator.component
     readonly int width;
     readonly int height;
 
-    TextboxComponent(int width, int height)
+    internal TextboxComponent(int width, int height)
     {
       this.width = width;
       this.height = height;
@@ -13,8 +13,8 @@ namespace practicing_design_patterns.structural.@object.decorator.component
 
     public void Draw()
     {
-      // TODO:
-      // ComponentUnitTests.OutputHelper.WriteLine($"Size of textbox: {this.width}:{this.height}");
+      ComponentUnitTests.OutputHelper.WriteLine
+        ($"Size of textbox: {this.width}:{this.height}");
     }
   }
 }
