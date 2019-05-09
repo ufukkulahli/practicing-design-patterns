@@ -7,7 +7,7 @@ namespace practicing_design_patterns.structural.@object.composite.structural_exa
   {
 		private readonly ICollection<IComponent> children = new List<IComponent>();
 		readonly string name;
-		CompositeComponent(string name) => this.name=name;
+		internal CompositeComponent(string name) => this.name=name;
 
 		public string Name() => this.name;
 
@@ -23,7 +23,7 @@ namespace practicing_design_patterns.structural.@object.composite.structural_exa
 
     public void Display(int depth)
     {
-		  Console.WriteLine(new String('-', depth) + name);
+      StructuralExampleUnitTests.OutputHelper.WriteLine(new String('-', depth) + name);
 			foreach(var component in children)
 			{
 			  component.Display(depth + 2);
