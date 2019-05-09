@@ -1,33 +1,39 @@
-using System;
 using System.Collections.Generic;
 
 namespace practicing_design_patterns.structural.@object.composite.structural_example
 {
-  class CompositeComponent : Component, IComponent
+  internal class CompositeComponent : Component, IComponent
   {
-		private readonly ICollection<IComponent> children = new List<IComponent>();
-		readonly string name;
-		internal CompositeComponent(string name) => this.name=name;
+    private readonly ICollection<IComponent> children = new List<IComponent>();
+    private readonly string name;
 
-		public string Name() => this.name;
+    internal CompositeComponent(string name)
+    {
+      this.name = name;
+    }
 
-    internal override void Add(IComponent component)
-		{
-		  this.children.Add(component);
-		}
-
-    internal override void Remove(IComponent component)
-		{
-			this.children.Remove(component);
-		}
+    public string Name()
+    {
+      return name;
+    }
 
     public void Display(int depth)
     {
-      StructuralExampleUnitTests.OutputHelper.WriteLine(new String('-', depth) + name);
-			foreach(var component in children)
-			{
-			  component.Display(depth + 2);
-			}
+      StructuralExampleUnitTests.OutputHelper.WriteLine(new string('-', depth) + name);
+      foreach (var component in children)
+      {
+        component.Display(depth + 2);
+      }
+    }
+
+    internal override void Add(IComponent component)
+    {
+      children.Add(component);
+    }
+
+    internal override void Remove(IComponent component)
+    {
+      children.Remove(component);
     }
   }
 }

@@ -1,8 +1,8 @@
 namespace practicing_design_patterns.structural.@object.composite.structural_example
 {
-  interface IComponent
+  internal interface IComponent
   {
     string Name();
-	  void Display(int depth);
+    void Display(int depth);
   }
 }

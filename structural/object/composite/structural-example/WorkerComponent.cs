@@ -1,16 +1,22 @@
-using System;
-
 namespace practicing_design_patterns.structural.@object.composite.structural_example
 {
-  class WorkerComponent : IComponent
+  internal class WorkerComponent : IComponent
   {
-		readonly string name;
-		internal WorkerComponent(string name) => this.name=name;
+    private readonly string name;
 
-		public string Name() => this.name;
+    internal WorkerComponent(string name)
+    {
+      this.name = name;
+    }
+
+    public string Name()
+    {
+      return name;
+    }
+
     public void Display(int depth)
     {
-		  StructuralExampleUnitTests.OutputHelper.WriteLine(new String('-', depth) + name);
+      StructuralExampleUnitTests.OutputHelper.WriteLine(new string('-', depth) + name);
     }
   }
 }
