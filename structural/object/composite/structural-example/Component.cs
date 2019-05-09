@@ -10,4 +10,8 @@ namespace practicing_design_patterns.structural.@object.composite.structural_exa
     internal abstract void Remove(Component component);
     internal abstract void Display(int depth);
   }
+  
+  class Composite : Component
+  {}
+  
 }
