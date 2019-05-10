@@ -15,6 +15,7 @@ namespace practicing_design_patterns.structural.@object.composite.structural_exa
     [Fact]
     public void ShouldPrintRecursivelyAllCompositeAndWorkerComponents()
     {
+      // ARRANGE
       var compositeComponent = new CompositeComponent("root component");
       compositeComponent.Add(new WorkerComponent("worker component 1"));
       compositeComponent.Add(new WorkerComponent("worker component 2"));
@@ -26,7 +27,11 @@ namespace practicing_design_patterns.structural.@object.composite.structural_exa
       compositeComponent.Add(compositeComponent2);
       compositeComponent.Add(new WorkerComponent("worker component in the root"));
 
+      // ACT
       compositeComponent.Display(1);
+
+      // ASSERT
+      Assert.Equal(4, compositeComponent.Count());
     }
   }
 }

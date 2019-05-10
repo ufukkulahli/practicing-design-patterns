@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 
 namespace practicing_design_patterns.structural.@object.composite.structural_example
@@ -34,6 +35,11 @@ namespace practicing_design_patterns.structural.@object.composite.structural_exa
     internal override void Remove(IComponent component)
     {
       children.Remove(component);
+    }
+
+    public int Count()
+    {
+      return this.children.Count();
     }
   }
 }
