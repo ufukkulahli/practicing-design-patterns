@@ -7,6 +7,7 @@ namespace practicing_design_patterns.structural.@object.composite.order
   {
     private readonly decimal price;
     private readonly ICollection<IProduct> products = new List<IProduct>();
+    public Box() : this(0) {}
     public Box(decimal price) => this.price = price;
     public void AddProduct(IProduct product) => this.products.Add(product);
     public void RemoveProduct(IProduct product) => this.products.Remove(product);
