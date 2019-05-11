@@ -13,7 +13,7 @@ namespace practicing_design_patterns.structural.@object.composite.order
     public void RemoveProduct(IProduct product) => this.products.Remove(product);
     public decimal Price()
     {
-      decimal totalPrice = 0;
+      decimal totalPrice = this.price;
       foreach(var p in this.products)
       {
         totalPrice += p.Price();
