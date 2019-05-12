@@ -6,3 +6,4 @@ Structural object-patterns define ways to compose objects to obtain new function
 We use these patterns to form large object structures between many disparate objects.
 
 * Decorator
+* Composite
