@@ -8,10 +8,15 @@ namespace practicing_design_patterns.structural.@object.composite.sentence_examp
     public static ITestOutputHelper OutputHelper;
 
     public SentenceExampleUnitTests(ITestOutputHelper outputHelper) => OutputHelper = outputHelper;
-    
+
     [Fact]
-    public void Test()
+    public void PrintsHelloWorld()
     {
+      // Arrange
+      var messenger = new Messenger().ComposeHelloWorld();
+
+      // Act
+      messenger.Print();
     }
   }
 }
