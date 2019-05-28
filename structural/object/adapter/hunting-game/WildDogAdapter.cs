@@ -1,9 +1,9 @@
 namespace practicing_design_patterns.structural.@object.adapter.hunting_game
 {
-  class WildDogAdapter : ILion
+  class WildDogObjectAdapter : ILion
   {
     WildDog wildDog;
-    internal WildDogAdapter(WildDog wildDog) => this.wildDog = wildDog;
+    internal WildDogObjectAdapter(WildDog wildDog) => this.wildDog = wildDog;
     public void Roar() => this.wildDog.Bark();
   }
 }

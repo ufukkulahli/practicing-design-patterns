@@ -22,7 +22,7 @@ namespace practicing_design_patterns.structural.@object.adapter.hunting_game
     public void MissesWildDogHunt()
     {
       // Arrange
-      var wildDog = new WildDogAdapter(new WildDog());
+      var wildDog = new WildDogObjectAdapter(new WildDog());
       var hunter = new Hunter();
 
       // Act
