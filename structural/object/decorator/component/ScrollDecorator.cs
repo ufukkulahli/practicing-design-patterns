@@ -4,7 +4,7 @@ namespace practicing_design_patterns.structural.@object.decorator.component
   {
     internal ScrollDecorator(IComponent component) : base(component)
     {}
-    public void Draw()
+    public new void Draw()
     {
       base.Draw();
       ComponentUnitTests.OutputHelper.WriteLine($", Scroll");
