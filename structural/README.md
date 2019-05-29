@@ -7,3 +7,4 @@ We use these patterns to form large object structures between many disparate obj
 
 * Decorator
 * Composite
+* Adaptter
