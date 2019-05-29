@@ -5,7 +5,8 @@ Our client works and expects specific kind of objects marked by an interface.
 Objects with different interfaces, the client could not work with them, as it should be.  
 Here comes the power of the Adapter pattern.  
 
-*Object Adapter*
+***Object Adapter***
+
 Create an `adapter` (wrapper) for that distinct object.  
 Provide the object to its adapter through the constructor.  
 Make it implement the interface of the client expected.  
