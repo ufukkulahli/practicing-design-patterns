@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace practicing_design_patterns.behavioral.@class.interpreter.expression
@@ -9,6 +10,11 @@ namespace practicing_design_patterns.behavioral.@class.interpreter.expression
     public Context(params KeyValuePair<string, Expression>[] variables)
     {
       this.variables = new Dictionary<string, Expression>(variables);
+    }
+
+    internal Expression GetVariable(string name)
+    {
+      return this.variables[name];
     }
   }
 }
