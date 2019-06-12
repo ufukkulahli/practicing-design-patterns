@@ -16,5 +16,10 @@ namespace practicing_design_patterns.behavioral.@class.interpreter.expression
     {
       return this.variables[name];
     }
+
+    internal void SetVariable(string name, Expression expression)
+    {
+      this.variables[name] = expression;
+    }
   }
 }

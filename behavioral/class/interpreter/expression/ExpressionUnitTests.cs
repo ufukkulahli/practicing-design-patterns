@@ -31,5 +31,24 @@ namespace practicing_design_patterns.behavioral.@class.interpreter.expression
       // Assert
       Assert.Equal(0, result);
     }
+
+    [Fact]
+    public void CalculatesExpressionWithVariable()
+    {
+      // Arrange
+      var adding = new AddExpression(new ConstantExpression(1), new Variable("n"));
+      var subtracting = new SubtractExpression(new ConstantExpression(4), new Variable("n"));
+      var subtractingResult = new SubtractExpression(adding, subtracting);
+      var n = 3;
+      var context = new Context();
+      context.SetVariable("n", new ConstantExpression(n));
+
+      // Act
+      var result = subtractingResult.Solve(context);
+
+      // Assert
+      Assert.Equal((1+n)-(4-n), result);
+      Assert.Equal(3, result);
+    }
   }
 }
