@@ -1,6 +1,6 @@
 namespace practicing_design_patterns.behavioral.@class.interpreter.roman_numeral
 {
-  public class Hundred : Expression
+  public class HundredExpression : Expression
   {
     public override string One() => "C";
     public override string Four() => "CD";
