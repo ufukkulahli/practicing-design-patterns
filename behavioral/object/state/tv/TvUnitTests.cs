@@ -10,14 +10,29 @@ namespace practicing_design_patterns.behavioral.@object.state.tv
     public TvUnitTests(ITestOutputHelper outputHelper) => OutputHelper = outputHelper;
 
     [Fact]
-    public void Test()
+    public void TvStateIsOffWhenPressedOfButton()
     {
-      // TODO
       // ARRANGE
+      var tv = new Tv();
 
       // ACT
+      var stateOfTv = tv.PressOffButton();
 
       // ASSERT
+      Assert.Equal("Tv is already off.", stateOfTv);
+    }
+
+    [Fact]
+    public void TvStateIsOnWhenPressedOfButton()
+    {
+      // ARRANGE
+      var tv = new Tv();
+
+      // ACT
+      var stateOfTv = tv.PressOnButton();
+
+      // ASSERT
+      Assert.Equal("Tv is on.", stateOfTv);
     }
   }
 }

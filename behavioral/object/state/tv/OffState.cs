@@ -7,7 +7,7 @@ namespace practicing_design_patterns.behavioral.@object.state.tv
     protected internal override string Off()
     {
       TvUnitTests.OutputHelper.WriteLine("Tv is already off.");
-      return "Tv is off.";
+      return "Tv is already off.";
     }
 
     protected internal override string On()
