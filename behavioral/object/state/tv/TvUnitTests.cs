@@ -34,5 +34,22 @@ namespace practicing_design_patterns.behavioral.@object.state.tv
       // ASSERT
       Assert.Equal("Tv is on.", stateOfTv);
     }
+    
+    [Fact]
+    public void PressesButtonsRespectively()
+    {
+      // ARRANGE
+      var tv = new Tv();
+
+      // ACT
+      var stateOfTv1 = tv.PressOnButton();
+      var stateOfTv2 = tv.PressMuteButton();
+      var stateOfTv3 = tv.PressOffButton();
+
+      // ASSERT
+      Assert.Equal("Tv is on.", stateOfTv1);
+      Assert.Equal("Tv is muted.", stateOfTv2);
+      Assert.Equal("Tv is off.", stateOfTv3);
+    }
   }
 }
