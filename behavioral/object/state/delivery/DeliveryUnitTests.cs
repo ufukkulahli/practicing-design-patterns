@@ -23,11 +23,11 @@ namespace practicing_design_patterns.behavioral.@object.state.delivery
       var deliviredPackage = delivery.ProceedToNextStep();
 
       // ASSERT
-      Assert.Equal("Obtained the Package", obtainedPackage);
-      Assert.Equal("Shipped the Package", shippedPackage);
-      Assert.Equal("Transporting the Package", transportingPackage);
-      Assert.Equal("Deliviring the Package", deliviringPackage);
-      Assert.Equal("Delivired the Package", deliviredPackage);
+      Assert.Equal("Obtained the package", obtainedPackage);
+      Assert.Equal("Shipped the package", shippedPackage);
+      Assert.Equal("Transporting the package", transportingPackage);
+      Assert.Equal("Deliviring the package", deliviringPackage);
+      Assert.Equal("Delivired the package", deliviredPackage);
     }
   }
 }
