@@ -5,7 +5,7 @@ namespace practicing_design_patterns.behavioral.@object.state.delivery.states
   	public string Update(Delivery delivery)
   	{
   		DeliveryUnitTests.OutputHelper.WriteLine("Delivired the package.");
-  		return "Delivired the package.";
+  		return "Delivired the package";
   	}
   }
 }

@@ -1,3 +1,4 @@
+using practicing_design_patterns.behavioral.@object.state.delivery.states;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -13,7 +14,7 @@ namespace practicing_design_patterns.behavioral.@object.state.delivery
     public void Test()
     {
       // ARRANGE
-      var delivery = new Delivery();
+      var delivery = new Delivery(new ObtainedPackage());
 
       // ACT
       var obtainedPackage = delivery.ProceedToNextStep();
