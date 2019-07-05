@@ -1,4 +1,4 @@
-**Chain of Responsibility**
+# Chain of Responsibility
 
 This pattern consists of several processing objects (or handlers) and a source object (or input/request/command) to be processed on.  
 When we put these handlers side by side they form the "chain".  

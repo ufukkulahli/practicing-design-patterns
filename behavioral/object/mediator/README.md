@@ -1,4 +1,4 @@
-**Mediator design pattern**
+# Mediator design pattern
 
 This pattern gets its name from an object which acts as a "mediator".  
 This mediator object sits between set of objects that want to communicate with each other.  

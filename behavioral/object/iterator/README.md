@@ -1,4 +1,4 @@
-**Iterator design pattern**
+# Iterator design pattern
 
 Although this pattern consists of several objects gets its name from an object called `Iterator`.  
 

@@ -1,4 +1,4 @@
-Structural patterns
+# Structural patterns
 
 These patterns are about `class` and `object` composition.  
 Structural class-creation patterns use inheritance to compose interfaces.  
@@ -7,4 +7,4 @@ We use these patterns to form large object structures between many disparate obj
 
 * Decorator
 * Composite
-* Adaptter
+* Adapter

@@ -1,4 +1,4 @@
-**Interpreter**
+# Interpreter
 
 This pattern specifies how to `evaluate` sentences in a `language` by the help of a `interpreter`.
 
