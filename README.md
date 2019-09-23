@@ -6,9 +6,9 @@ Deals with object relationships that can be changed at runtime.
 Class Scope:
 Deals with class relationships that can be changed at compile time.
 
-## Creational
+## [Creational](creational/README.md)
 
-* Factory Method
+* [Factory Method](creational/class/factory-method/README.md)
 
 ## [Structural](structural/README.md)
 
@@ -47,3 +47,30 @@ Deals with class relationships that can be changed at compile time.
     * [Beverage example](behavioral/class/template-method/beverage-example/BeverageUnitTests.cs)
     * [Sandwich](behavioral/class/template-method/sandwich-example/UnitTests.cs)
     * [Sorting algorithm](behavioral/class/template-method/sortalgorithm-example/SortingUnitTests.cs)
+
+* Object scope
+
+  * [Chain of responsibility](behavioral/object/chain-of-responsibility/README.md)
+    * [Customer support](behavioral/object/chain-of-responsibility/customer-support/CustomerSupportUnitTests.cs)
+    * [Logger](behavioral/object/chain-of-responsibility/logger/LoggerUnitTests.cs)
+    * [Printer](behavioral/object/chain-of-responsibility/printer/PrinterUnitTests.cs)
+
+  * [Iterator](behavioral/object/iterator/README.md)
+    * [Binary search three](behavioral/object/iterator/bst/BstIteratorUnitTests.cs)
+    * [Numbers](behavioral/object/iterator/numbers/NumbersIteratorUnitTests.cs)
+    * [Words](behavioral/object/iterator/words/WordsIteratorUnitTests.cs)
+
+  * [Mediator](behavioral/object/mediator/README.md)
+    * [Chat](behavioral/object/mediator/chat/ChatUnitTests.cs)
+    * [Money transfer](behavioral/object/mediator/money-transfer/MoneyTransferUnitTests.cs)
+
+  * [State](behavioral/object/state/README.md)
+    * [Delivery](behavioral/object/state/delivery/DeliveryUnitTests.cs)
+    * [Text editor](behavioral/object/state/text-editor/TextEditorUnitTests.cs)
+    * [Tv](behavioral/object/state/tv/TvUnitTests.cs)
+
+  * [Visitor](behavioral/object/visitor/README.md)
+    * [Expression](behavioral/object/visitor/expression/ExpressionUnitTests.cs)
+    * [Residence](behavioral/object/visitor/residence-example/ResidenceUnitTests.cs)
+    * [Tourist](behavioral/object/visitor/tourist-example/TouristUnitTests.cs)
+    * [Collage (with composite pattern)](behavioral/object/visitor/college-example-with-composite-pattern/CollegeUnitTests.cs)
