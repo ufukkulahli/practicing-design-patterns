@@ -2,6 +2,6 @@ namespace practicing_design_patterns.creational.@class.factory_method.transporta
 {
   public interface Transport
   {
-    void Deliver();
+    string Deliver();
   }
 }
