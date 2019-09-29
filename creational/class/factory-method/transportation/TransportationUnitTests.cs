@@ -16,5 +16,18 @@ namespace practicing_design_patterns.creational.@class.factory_method.transporta
       // ASSERT
       Assert.Equal("Deliver goods via the <truck>", truck.Deliver());
     }
+
+    [Fact]
+    public void ShipFactoryCreatesTypeOfShipTransport()
+    {
+      // ARRANGE
+      TransportFactory shipFactory = new ShipFactory();
+
+      // ACT
+      Transport ship = shipFactory.CreateTransportationVehicle();
+
+      // ASSERT
+      Assert.Equal("Deliver goods via the <ship>", ship.Deliver());
+    }
   }
 }
