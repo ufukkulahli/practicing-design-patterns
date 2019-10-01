@@ -9,15 +9,32 @@ namespace practicing_design_patterns.creational.@class.factory_method.letter
     private static readonly IEnumerable<char> vowels =
       new List<char>(){'a','e','i','o','u','A','E','I','O','U'};
 
-    public static Letter New(char c)
+    public abstract bool IsVowel();
+    public abstract bool IsConsonant();
+
+    public static Letter New(char letter)
     {
-      throw new Exception();
-      
-      if(vowels.Contains(c))
+      if(vowels.Contains(letter))
       {
-        //return new Vowel(c);
+        return new Vowel(letter);
       }
-      //return new Consonant(c);
+      return new Consonant(letter);
+    }
+
+    private sealed class Vowel : Letter
+    {
+      private char letter;
+      public Vowel(char letter) => this.letter = letter;
+      public override bool IsVowel() => true;
+      public override bool IsConsonant() => false;
+    }
+
+    private sealed class Consonant : Letter
+    {
+      private char letter;
+      public Consonant(char letter) => this.letter = letter;
+      public override bool IsVowel() => false;
+      public override bool IsConsonant() => true;
     }
   }
 }

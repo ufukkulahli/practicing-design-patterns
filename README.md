@@ -13,6 +13,7 @@ Deals with class relationships that can be changed at compile time.
   * [Factory Method](creational/class/factory-method/README.md)
     * [Transportation](creational/class/factory-method/transportation/TransportationUnitTests.cs)
     * [Dessert](creational/class/factory-method/dessert/DessertUnitTests.cs)
+    * [Letter, a vowel or consonant](creational/class/factory-method/letter/LetterUnitTests.cs)
 
 ## [Structural](structural/README.md)
 
