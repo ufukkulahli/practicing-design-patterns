@@ -15,6 +15,10 @@ Deals with class relationships that can be changed at compile time.
     * [Dessert](creational/class/factory-method/dessert/DessertUnitTests.cs)
     * [Letter, a vowel or consonant](creational/class/factory-method/letter/LetterUnitTests.cs)
 
+* Object scope
+
+  * [Abstract Factory](creational/object/abstract-factory/README.md)
+
 ## [Structural](structural/README.md)
 
 * Class scope
