@@ -17,5 +17,19 @@ namespace practicing_design_patterns.creational.@object.abstract_factory.button
       // Assert
       Assert.Equal("Here is the iOS button.", actual);
     }
+
+    [Fact]
+    public void CreatesAndroidButton()
+    {
+      // Arrange
+      UIFactory androidfactory = new AndroidUIFactory();
+      Button androidButton = androidfactory.Create();
+
+      // Act
+      var actual = androidButton.Render();
+
+      // Assert
+      Assert.Equal("Here is the Android button.", actual);
+    }
   }
 }
