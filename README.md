@@ -19,6 +19,7 @@ Deals with class relationships that can be changed at compile time.
 
   * [Abstract Factory](creational/object/abstract-factory/README.md)
     * [Button](creational/object/abstract-factory/button/ButtonUnitTests.cs)
+    * [Furniture](creational/object/abstract-factory/furniture/FurnitureUnitTests.cs)
 
 ## [Structural](structural/README.md)
 
