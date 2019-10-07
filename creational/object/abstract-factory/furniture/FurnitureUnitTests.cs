@@ -7,13 +7,14 @@ namespace practicing_design_patterns.creational.@object.abstract_factory.furnitu
     [Fact]
     public void CreateClassicThemedFurniture()
     {
-      // TODO
       // ARRANGE
+      FurnitureFactory furnitureFactory = new ClassicThemedFactory();
 
       // ACT
+      var chair = furnitureFactory.Create();
 
       // ASSERT
-
+      Assert.Equal("Classic chair, Wooden, 1x1x1", chair.ToString());
     }
   }
 }
