@@ -4,5 +4,6 @@ namespace practicing_design_patterns.creational.@object.abstract_factory.furnitu
   {
     Chair CreateChair();
     Table CreateTable();
+    Sofa CreateSofa();
   }
 }

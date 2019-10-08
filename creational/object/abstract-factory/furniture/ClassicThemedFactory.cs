@@ -4,5 +4,6 @@ namespace practicing_design_patterns.creational.@object.abstract_factory.furnitu
   {
     public Chair CreateChair() => new ClassicChair();
     public Table CreateTable() => new ClassicTable();
+    public Sofa CreateSofa() => new ClassicSofa();
   }
 }
