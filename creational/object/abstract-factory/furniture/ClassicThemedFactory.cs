@@ -2,6 +2,7 @@ namespace practicing_design_patterns.creational.@object.abstract_factory.furnitu
 {
   public sealed class ClassicThemedFactory : FurnitureFactory
   {
-    public Chair Create() => new ClassicChair();
+    public Chair CreateChair() => new ClassicChair();
+    public Table CreateTable() => new ClassicTable();
   }
 }
