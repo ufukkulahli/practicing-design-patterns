@@ -29,9 +29,13 @@ namespace practicing_design_patterns.creational.@object.abstract_factory.furnitu
 
       // ACT
       var chair = modernThemedFurnitureFactory.CreateChair();
+      var table = modernThemedFurnitureFactory.CreateTable();
+      var sofa = modernThemedFurnitureFactory.CreateSofa();
 
       // ASSERT
       Assert.Equal("Modern chair, Metal, 1x1x1", chair.ToString());
+      Assert.Equal("Modern table, Metal, 2x1x1", table.ToString());
+      Assert.Equal("Modern sofa, Metal, 2x1x1", sofa.ToString());
     }
   }
 }
