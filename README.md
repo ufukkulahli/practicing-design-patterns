@@ -85,3 +85,6 @@ Deals with class relationships that can be changed at compile time.
     * [Residence](behavioral/object/visitor/residence-example/ResidenceUnitTests.cs)
     * [Tourist](behavioral/object/visitor/tourist-example/TouristUnitTests.cs)
     * [Collage (with composite pattern)](behavioral/object/visitor/college-example-with-composite-pattern/CollegeUnitTests.cs)
+
+  * [Strategy](behavioral/object/strategy/README.md)
+    * [Route](behavioral/object/strategy/route/RouteUnitTests.cs)
