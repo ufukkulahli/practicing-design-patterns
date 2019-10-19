@@ -5,7 +5,7 @@ namespace practicing_design_patterns.behavioral.@object.strategy.billing
   public class BillingUnitTests
   {
     [Fact]
-    public void ApplyNormalBillingToCustomer()
+    public void ApplyNormalBillingToAmount()
     {
       // Arrange
       Billing normal = new Normal();
@@ -18,7 +18,7 @@ namespace practicing_design_patterns.behavioral.@object.strategy.billing
     }
 
     [Fact]
-    public void ApplyHappyHourBillingToCustomer()
+    public void ApplyNormalBillingToCustomer()
     {
       // Arrange
       Billing normal = new Normal();
@@ -27,12 +27,10 @@ namespace practicing_design_patterns.behavioral.@object.strategy.billing
       customer.Consume(beer);
 
       // Act
-      // TODO: Apply billing to beverages
       var amount = customer.Pay();
-      //var price = normal.Apply(new decimal(5));
 
       // Assert
-      // TODO
+      Assert.Equal(new decimal(5), amount);
     }
   }
 }

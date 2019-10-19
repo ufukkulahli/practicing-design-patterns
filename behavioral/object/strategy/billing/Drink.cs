@@ -11,6 +11,6 @@ namespace practicing_design_patterns.behavioral.@object.strategy.billing
       this.billing = billing;
     }
 
-    public decimal Price() => this.money.Value();
+    public decimal Price() => this.billing.Apply(this.money.Value());
   }
 }
