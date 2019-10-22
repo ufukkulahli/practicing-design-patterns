@@ -46,6 +46,8 @@ Deals with class relationships that can be changed at compile time.
     * [Making coffee](structural/object/decorator/coffee/CoffeeUnitTests.cs)
     * [UI Component](structural/object/decorator/component/ComponentUnitTests.cs)
 
+  * [Facade](structural/object/facade/README.md)
+
 ## [Behavioral](behavioral/README.md)
 
 * Class scope
