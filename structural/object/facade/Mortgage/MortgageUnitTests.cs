@@ -1,7 +1,7 @@
 using practicing_design_patterns.behavioral.@object.strategy.billing;
 using Xunit;
 
-namespace practicing_design_patterns
+namespace practicing_design_patterns.structural.@object.facade.mortgage
 {
   public class MortgageUnitTests
   {
