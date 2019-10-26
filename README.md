@@ -47,6 +47,8 @@ Deals with class relationships that can be changed at compile time.
     * [UI Component](structural/object/decorator/component/ComponentUnitTests.cs)
 
   * [Facade](structural/object/facade/README.md)
+    * [Mortgage](structural/object/facade/mortgage/MortgageUnitTests.cs)
+    * [Waiter](structural/object/facade/waiter/WaiterUnitTests.cs)
 
 ## [Behavioral](behavioral/README.md)
 
