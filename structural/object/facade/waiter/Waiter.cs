@@ -13,7 +13,7 @@ namespace practicing_design_patterns.structural.@object.facade.waiter
       var orders = this.kitchens
                 .Where(kitchen => kitchen.CanPrepare(this.reckoning))
                 .Select(kitchen => kitchen.Prepare(this.reckoning));
-      return new Orders();
+      return null;
     }
   }
 }
