@@ -11,7 +11,7 @@ namespace practicing_design_patterns.structural.@object.facade.waiter
       Waiter waiter = new Waiter();
 
       // Act
-      waiter.ReceiveOrder(null);
+      waiter.ReceiveOrder(new Reckoning("AColdAppetizer", "AHotEntree", "AWhiteWine"));
       Orders orders = waiter.Serve();
 
       // Assert
