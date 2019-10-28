@@ -15,7 +15,7 @@ namespace practicing_design_patterns.structural.@object.facade.waiter
       Orders orders = waiter.Serve();
 
       // Assert
-      Assert.Null(orders);
+      Assert.NotNull(orders);
     }
   }
 }

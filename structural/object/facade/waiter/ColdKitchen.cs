@@ -5,20 +5,17 @@ namespace practicing_design_patterns.structural.@object.facade.waiter
 {
   public sealed class ColdKitchen : Kitchen
   {
-    private readonly List<string> thingsWeCanPrepare;
+    private readonly ICollection<string> foodsWeCanPrepare = new List<string>();
     
     public ColdKitchen()
     {
-      this.thingsWeCanPrepare.Add("AColdAppetizer");
-      this.thingsWeCanPrepare.Add("AnOtherColdAppetizer");
+      this.foodsWeCanPrepare.Add("AColdAppetizer");
+      this.foodsWeCanPrepare.Add("AnOtherColdAppetizer");
     }
 
-    public bool CanPrepare(Reckoning reckoning) =>
-      this.thingsWeCanPrepare.Any(thing => reckoning.Desires().Contains(thing));
-
-    public Orders Prepare(Reckoning reckoning)
-    {
-      throw new System.NotImplementedException();
-    }
+    public IEnumerable<Order> Prepare(Reckoning reckoning) =>
+          this.foodsWeCanPrepare
+              .Where(food => reckoning.Desires().Contains(food))
+              .Select(food => new Order(food));
   }
 }

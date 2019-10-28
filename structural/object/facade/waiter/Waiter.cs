@@ -1,19 +1,23 @@
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace practicing_design_patterns.structural.@object.facade.waiter
 {
   public sealed class Waiter
   {
     private Reckoning reckoning = Reckoning.Empty();
-    private readonly IEnumerable<Kitchen> kitchens = new List<Kitchen>();
-    public void ReceiveOrder(Reckoning reckoning) => this.reckoning = reckoning;
-    public Orders Serve()
+    private readonly ICollection<Kitchen> kitchens = new List<Kitchen>();
+    public Waiter() => this.LearnKitchens();
+
+    private void LearnKitchens()
     {
-      var orders = this.kitchens
-                .Where(kitchen => kitchen.CanPrepare(this.reckoning))
-                .Select(kitchen => kitchen.Prepare(this.reckoning));
-      return null;
+      this.kitchens.Add(new ColdKitchen());
     }
+
+    public void ReceiveOrder(Reckoning reckoning) => this.reckoning = reckoning;
+    public Orders Serve() =>
+        new Orders(this.kitchens
+          .SelectMany(kitchen => kitchen.Prepare(this.reckoning)));
   }
 }
