@@ -14,6 +14,7 @@ namespace practicing_design_patterns.structural.@object.facade.waiter
     {
       this.kitchens.Add(new ColdKitchen());
       this.kitchens.Add(new HotKitchen());
+      this.kitchens.Add(new Bar());
     }
 
     public void ReceiveOrder(Reckoning reckoning) => this.reckoning = reckoning;
