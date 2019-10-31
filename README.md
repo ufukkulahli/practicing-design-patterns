@@ -50,6 +50,8 @@ Deals with class relationships that can be changed at compile time.
     * [Mortgage](structural/object/facade/mortgage/MortgageUnitTests.cs)
     * [Waiter](structural/object/facade/waiter/WaiterUnitTests.cs)
 
+  * [Proxy](structural/object/proxy/README.md)
+
 ## [Behavioral](behavioral/README.md)
 
 * Class scope
