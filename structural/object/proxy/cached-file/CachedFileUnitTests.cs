@@ -8,7 +8,7 @@ namespace practicing_design_patterns.structural.@object.proxy.cached_file
     public void FileIsBeingReadEveryTimeSinceItIsNotCached()
     {
       // Arrange
-      File monthlyReport = new MonthlyReport();
+      var monthlyReport = new Client(new MonthlyReport()).ObtainReport();
 
       // Act
       FileContent monthlyReportContent = monthlyReport.Content();
