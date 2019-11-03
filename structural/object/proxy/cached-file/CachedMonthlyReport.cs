@@ -2,15 +2,15 @@ namespace practicing_design_patterns.structural.@object.proxy.cached_file
 {
   public sealed class CachedMonthlyReport : File
   {
-    private File actualFile;
+    private FileContent monthlyReportContent;
 
     public FileContent Content()
     {
-      if(this.actualFile == null)
+      if(this.monthlyReportContent == null)
       {
-        this.actualFile = new MonthlyReport();
+        this.monthlyReportContent = new MonthlyReport().Content();
       }
-      return this.actualFile.Content();
+      return this.monthlyReportContent;
     }
   }
 }

@@ -1,9 +1,9 @@
 namespace practicing_design_patterns.structural.@object.proxy.cached_file
 {
-  internal class Client
+  public sealed class Client
   {
     private readonly File report;
     public Client(File report) => this.report = report;
-    internal File ObtainReport() => this.report;
+    public File ObtainReport() => this.report;
   }
 }
