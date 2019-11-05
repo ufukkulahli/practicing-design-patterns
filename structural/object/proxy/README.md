@@ -6,5 +6,6 @@ The reason why the client not know about this change is that both real and proxy
 
 Examples
 
-* [Cached file](structural/object/proxy/cached-file/CachedFileUnitTests.cs)
-* [Logging](structural/object/proxy/logging/LoggingUnitTests.cs)
+* [Cached file](cached-file/CachedFileUnitTests.cs)
+* [Logging](logging/LoggingUnitTests.cs)
+* [Authentication](authentication/AuthUnitTests.cs)

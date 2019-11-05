@@ -53,6 +53,7 @@ Deals with class relationships that can be changed at compile time.
   * [Proxy](structural/object/proxy/README.md)
     * [Cached file](structural/object/proxy/cached-file/CachedFileUnitTests.cs)
     * [Logging](structural/object/proxy/logging/LoggingUnitTests.cs)
+    * [Authentication](structural/object/proxy/logging/LoggingUnitTests.cs)
 
 ## [Behavioral](behavioral/README.md)
 
