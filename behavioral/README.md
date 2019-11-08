@@ -8,8 +8,9 @@ Concerned with communication, managing algorithms, relationships responsibilitie
 
 * Object scope
   * [Chain of responsibility](object/chain-of-responsibility/README.md)
+  * [Command](object/command/README.md)
   * [Iterator](object/iterator/README.md)
   * [Mediator](object/mediator/README.md)
   * [State](object/state/README.md)
-  * [Visitor](object/visitor/README.md)
   * [Strategy](object/strategy/README.md)
+  * [Visitor](object/visitor/README.md)

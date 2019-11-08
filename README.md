@@ -98,3 +98,6 @@ Deals with class relationships that can be changed at compile time.
   * [Strategy](behavioral/object/strategy/README.md)
     * [Route](behavioral/object/strategy/route/RouteUnitTests.cs)
     * [Billing](behavioral/object/strategy/billing/BillingUnitTests.cs)
+
+  * [Command](behavioral/object/command/README.md)
+    * [Bulb](behavioral/object/command/bulb/BulbUnitTests.cs)
