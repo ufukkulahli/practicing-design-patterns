@@ -18,5 +18,20 @@ namespace practicing_design_patterns.behavioral.@object.command.bulb
       // Assert
       Assert.True(bulb.IsOn());
     }
+
+    [Fact]
+    public void TurnsOffTheBulb()
+    {
+      // Arrange
+      var bulb = new Bulb();
+      Command turnOffCommand = new TurnOff(bulb);
+      var remote = new RemoteControl();
+
+      // Act
+      remote.Submit(turnOffCommand);
+
+      // Assert
+      Assert.False(bulb.IsOn());
+    }
   }
 }

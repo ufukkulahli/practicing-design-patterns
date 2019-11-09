@@ -15,5 +15,6 @@ namespace practicing_design_patterns.behavioral.@object.command.bulb
     {
       this.isOn = false;
       Console.WriteLine("Turned off the bulb.");
-    }}
+    }
+  }
 }
