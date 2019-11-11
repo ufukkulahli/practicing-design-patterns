@@ -8,13 +8,15 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
     public void Test()
     {
       // Arrange
-      var textEditor = new TextEditorApp();
+      var clipboard = new Clipboard();
+      var textEditor = new TextEditorApp(clipboard);
+      Command copyCommand = new CopyCommand(clipboard, "Text to be copied");
       
       // Act
-      // TODO
+      textEditor.ExecuteCommand(copyCommand);
 
       // Assert
-      Assert.True(true);
+      Assert.Equal("Text to be copied", textEditor.ClipboardValue());
     }
   }
 }
