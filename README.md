@@ -101,3 +101,4 @@ Deals with class relationships that can be changed at compile time.
 
   * [Command](behavioral/object/command/README.md)
     * [Bulb](behavioral/object/command/bulb/BulbUnitTests.cs)
+    * [Text editor app](behavioral/object/command/text-editor-app/TextEditorAppUnitTests.cs)
