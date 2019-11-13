@@ -9,9 +9,10 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
     {
       // Arrange
       var clipboard = new Clipboard();
-      var textEditor = new TextEditorApp(clipboard);
+      var textArea = new TextArea();
+      var textEditor = new TextEditorApp(clipboard, textArea);
       Command copyCommand = new CopyCommand(clipboard, "Text to be copied");
-      
+
       // Act
       textEditor.ExecuteCommand(copyCommand);
 
@@ -24,7 +25,8 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
     {
       // Arrange
       var clipboard = new Clipboard();
-      var textEditor = new TextEditorApp(clipboard);
+      var textArea = new TextArea();
+      var textEditor = new TextEditorApp(clipboard, textArea);
       Command cutCommand = new CutCommand(clipboard, "Text to be cut");
 
       // Act
@@ -32,6 +34,25 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
 
       // Assert
       Assert.Equal("Text to be cut", textEditor.ClipboardValue());
+    }
+
+    [Fact]
+    public void PastesGivenTextFromClipboardToTextEditor()
+    {
+      // Arrange
+      var clipboard = new Clipboard();
+      var textArea = new TextArea();
+      var textEditor = new TextEditorApp(clipboard, textArea);
+      Command cutCommand = new CutCommand(clipboard, "Text to be cut");
+      textEditor.ExecuteCommand(cutCommand);
+
+      Command pasteCommand = new PasteCommand(clipboard, textArea);
+
+      // Act
+      textEditor.ExecuteCommand(pasteCommand);
+
+      // Assert
+      Assert.Equal("Text to be cut", textArea.Value());
     }
   }
 }
