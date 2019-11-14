@@ -27,13 +27,13 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
       var clipboard = new Clipboard();
       var textArea = new TextArea();
       var textEditor = new TextEditorApp(clipboard, textArea);
-      Command cutCommand = new CutCommand(clipboard, "Text to be cut");
+      Command cutCommand = new CutCommand(clipboard, textArea);
 
       // Act
       textEditor.ExecuteCommand(cutCommand);
 
       // Assert
-      Assert.Equal("Text to be cut", textEditor.ClipboardValue());
+      Assert.Equal("Hello", textEditor.ClipboardValue());
     }
 
     [Fact]
@@ -43,7 +43,7 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
       var clipboard = new Clipboard();
       var textArea = new TextArea();
       var textEditor = new TextEditorApp(clipboard, textArea);
-      Command cutCommand = new CutCommand(clipboard, "Text to be cut");
+      Command cutCommand = new CutCommand(clipboard, textArea);
       textEditor.ExecuteCommand(cutCommand);
 
       Command pasteCommand = new PasteCommand(clipboard, textArea);
@@ -52,7 +52,7 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
       textEditor.ExecuteCommand(pasteCommand);
 
       // Assert
-      Assert.Equal("Text to be cut", textArea.Value());
+      Assert.Equal(" World!Hello", textArea.Value());
     }
   }
 }
