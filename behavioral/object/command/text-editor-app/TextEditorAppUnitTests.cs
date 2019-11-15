@@ -54,5 +54,22 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
       // Assert
       Assert.Equal(" World!Hello", textArea.Value());
     }
+
+    [Fact]
+    public void UndoCommandDoesNothingForNow()
+    {
+      // Arrange
+      var clipboard = new Clipboard();
+      var textArea = new TextArea();
+      var textEditor = new TextEditorApp(clipboard, textArea);
+
+      Command pasteCommand = new UndoCommand();
+
+      // Act
+      textEditor.ExecuteCommand(pasteCommand);
+
+      // Assert
+      Assert.Equal("Hello World!", textArea.Value());
+    }
   }
 }
