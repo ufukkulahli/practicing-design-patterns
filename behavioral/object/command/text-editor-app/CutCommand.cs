@@ -2,19 +2,15 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
 {
   public sealed class CutCommand : Command
   {
-    private Clipboard clipboard;
-    private TextArea textArea;
-
-    public CutCommand(Clipboard clipboard, TextArea textArea)
+    public CutCommand(TextArea textArea, Clipboard clipboard) :
+      base(textArea, clipboard)
     {
-      this.clipboard = clipboard;
-      this.textArea = textArea;
     }
 
     public override void Execute()
     {
-      this.clipboard.value = this.textArea.Selection();
-      this.textArea.Delete();
+      base.Clipboard.value = base.TextArea.Selection();
+      base.TextArea.Delete();
     }
   }
 }
