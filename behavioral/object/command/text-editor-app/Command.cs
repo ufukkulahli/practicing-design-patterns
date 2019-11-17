@@ -4,6 +4,7 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
   {
     protected readonly TextArea TextArea;
     protected readonly Clipboard Clipboard;
+    private string backup = string.Empty;
 
     protected Command(TextArea textArea, Clipboard clipboard)
     {
@@ -12,5 +13,7 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
     }
 
     public abstract void Execute();
+    public void BackUp() => this.backup = TextArea.Value();
+    public void Undo() => TextArea.SetText(this.backup);
   }
 }

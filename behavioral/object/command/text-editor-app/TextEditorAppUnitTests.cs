@@ -63,13 +63,18 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
       var textArea = new TextArea();
       var textEditor = new TextEditorApp(clipboard, textArea);
 
-      Command pasteCommand = new UndoCommand(textArea, clipboard);
+      // (Cut the 'Hello')
+      Command cutCommand = new CutCommand(textArea, clipboard);
+      textEditor.ExecuteCommand(cutCommand);
+      Assert.Equal(" World!", textArea.Value());
+
+      Command undoCommand = new UndoCommand(textArea, clipboard, textEditor);
 
       // Act
-      textEditor.ExecuteCommand(pasteCommand);
+      textEditor.ExecuteCommand(undoCommand);
 
       // Assert
-      Assert.Equal("Hello World!", textArea.Value());
+      Assert.Equal(" World!", textArea.Value());
     }
   }
 }
