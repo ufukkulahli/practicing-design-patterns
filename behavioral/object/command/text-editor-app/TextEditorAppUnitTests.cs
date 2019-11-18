@@ -74,7 +74,7 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
       textEditor.ExecuteCommand(undoCommand);
 
       // Assert
-      Assert.Equal(" World!", textArea.Value());
+      Assert.Equal("Hello World!", textArea.Value());
     }
   }
 }

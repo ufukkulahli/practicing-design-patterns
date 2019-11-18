@@ -10,17 +10,14 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
     {
       this.clipboard = clipboard;
       this.textArea = textArea;
+      this.history = new CommandHistory();
     }
     public void ExecuteCommand(Command command)
     {
       command.Execute();
+      this.history.Add(command);
     }
     public string ClipboardValue() => this.clipboard.value;
-
-    public void Undo()
-    {
-      var command = history.Pop();
-      command?.Undo();
-    }
+    public void Undo() => history.LastCommand()?.Undo();
   }
 }

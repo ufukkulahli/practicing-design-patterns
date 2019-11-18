@@ -13,7 +13,8 @@ namespace practicing_design_patterns.behavioral.@object.command.text_editor_app
     }
 
     public abstract void Execute();
-    public void BackUp() => this.backup = TextArea.Value();
+    public abstract bool IsUndoable();
+    public void BackUpText() => this.backup = TextArea.Value();
     public void Undo() => TextArea.SetText(this.backup);
   }
 }
