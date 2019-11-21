@@ -22,12 +22,16 @@ namespace practicing_design_patterns.behavioral.@object.command.stock
     [Fact]
     public void SellsStock()
     {
-      // TODO
       // Arrange
+      var stock = new Stock();
+      Order sellStockOrder = new SellStockOrder(stock);
+      var agent = new Agent();
 
       // Act
+      var sellOrderResult = agent.PlaceOrder(sellStockOrder);
 
       // Assert
+      Assert.False(sellOrderResult);
     }
   }
 }
