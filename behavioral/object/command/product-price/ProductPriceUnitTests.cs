@@ -31,5 +31,23 @@ namespace practicing_design_patterns.behavioral.@object.command.product_price
       // Assert
       Assert.Equal(799, updatedPrice);
     }
+
+    [Fact]
+    public void DecreasePriceFirstThenUndoThatPriceChange()
+    {
+      // Arrange
+      var phone = new Product("CoolPhone", new decimal(899));
+      Command priceDecrease = new PriceDecreaseCommand(phone, 100);
+      PriceChanges priceChanges = new PriceChanges();
+      var updatedPrice = priceChanges.Apply(priceDecrease);
+      Assert.Equal(799, updatedPrice);
+      Assert.Equal(799, phone.Price());
+
+      // Act
+      priceChanges.UndoLast();
+
+      // Assert
+      Assert.Equal(899, phone.Price());
+    }
   }
 }

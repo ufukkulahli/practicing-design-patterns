@@ -12,5 +12,6 @@ namespace practicing_design_patterns.behavioral.@object.command.product_price
     }
 
     public decimal Execute() => this.phone.IncreasePrice(this.price);
+    public void Undo() => this.phone.DecreasePrice(this.price);
   }
 }
