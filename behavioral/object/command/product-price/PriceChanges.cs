@@ -15,13 +15,18 @@ namespace practicing_design_patterns.behavioral.@object.command.product_price
       return this.priceChangeCommand.Execute();
     }
 
-    public void UndoLast() => this.priceChangeCommand.Undo();
+    public void UndoLast()
+    {
+      this.priceChangeCommand.Undo();
+      ProductPriceUnitTests.TestOutputHelper.WriteLine(this.priceChangeCommand.ToString());
+    }
 
     public void UndoAll()
     {
       foreach (var change in Enumerable.Reverse(this.changes))
       {
         change.Undo();
+        ProductPriceUnitTests.TestOutputHelper.WriteLine(change.ToString());
       }
     }
   }
