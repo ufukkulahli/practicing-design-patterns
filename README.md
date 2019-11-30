@@ -104,3 +104,6 @@ Deals with class relationships that can be changed at compile time.
     * [Text editor app](behavioral/object/command/text-editor-app/TextEditorAppUnitTests.cs)
     * [Stock buy-sell](behavioral/object/command/stock/StockUnitTests.cs)
     * [Product price](behavioral/object/command/product-price/ProductPriceUnitTests.cs)
+
+  * [Observer](behavioral/object/observer/README.md)
+    * [Job seeking](behavioral/object/observer/job-seeking/JobSeekingUnitTests.cs)
