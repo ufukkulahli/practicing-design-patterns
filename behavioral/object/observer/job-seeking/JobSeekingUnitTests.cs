@@ -1,16 +1,25 @@
+using Xunit;
+
 namespace practicing_design_patterns.behavioral.@object.observer.job_seeking
 {
   public class JobSeekingUnitTests
   {
-    public void Test()
+    [Fact]
+    public void JoeAndJackDaltonGetEmployed()
     {
-      // TODO
       // Arrange
+      var joeDalton = new JobSeeker("Joe Dalton");
+      var jackDalton = new JobSeeker("Jack Dalton");
+
+      var jobPostings = new JobPostings();
+      jobPostings.Subscribe(joeDalton, jackDalton);
 
       // Act
+      jobPostings.AddJob(new JobPost("Bank Robbery"));
 
       // Assert
-
+      Assert.True(joeDalton.IsEmployed());
+      Assert.True(jackDalton.IsEmployed());
     }
   }
 }
