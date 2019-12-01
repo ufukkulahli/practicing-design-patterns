@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace practicing_design_patterns.behavioral.@object.observer.job_seeking
@@ -14,6 +15,7 @@ namespace practicing_design_patterns.behavioral.@object.observer.job_seeking
       }
     }
 
+    public void Unsubscribe(JobSeeker jackDalton) => this.jobSeekers.Remove(jackDalton);
     public void AddJob(JobPost jobPost) => this.NotifySeekers(jobPost);
 
     private void NotifySeekers(JobPost jobPost)
@@ -23,5 +25,6 @@ namespace practicing_design_patterns.behavioral.@object.observer.job_seeking
         seeker.GetInformedAbout(jobPost);
       }
     }
+
   }
 }
