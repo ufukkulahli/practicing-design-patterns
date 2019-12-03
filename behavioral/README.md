@@ -14,3 +14,4 @@ Concerned with communication, managing algorithms, relationships responsibilitie
   * [State](object/state/README.md)
   * [Strategy](object/strategy/README.md)
   * [Visitor](object/visitor/README.md)
+  * [Observer](object/observer/README.md)

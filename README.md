@@ -107,3 +107,4 @@ Deals with class relationships that can be changed at compile time.
 
   * [Observer](behavioral/object/observer/README.md)
     * [Job seeking](behavioral/object/observer/job-seeking/JobSeekingUnitTests.cs)
+    * [Stock price change](behavioral/object/observer/stock-price-change/StockPriceChange.cs)
