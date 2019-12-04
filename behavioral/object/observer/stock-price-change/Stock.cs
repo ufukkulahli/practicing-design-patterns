@@ -33,6 +33,7 @@ namespace practicing_design_patterns.behavioral.@object.observer.stock_price_cha
     }
 
     public void AddInvestor(Investor investor) => this.Investors.Add(investor);
+    public void RemoveInvestor(Investor investor) => this.Investors.Remove(investor);
     public override string ToString() => $"{this.name} stock price just changed to {this.price}";
   }
 }
