@@ -2,7 +2,7 @@ using Xunit;
 
 namespace practicing_design_patterns.behavioral.@object.observer.stock_price_change
 {
-  public class StockPriceChange
+  public class StockPriceChangeUnitTests
   {
     [Fact]
     public void JoeAndJackDaltonGetNotifiedAboutPriceChange()
