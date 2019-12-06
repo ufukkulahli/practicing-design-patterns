@@ -7,9 +7,14 @@ namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies
     [Fact]
     public void NotifyOtherServicesWhenAnEventOccurs()
     {
-      // TODO
       // Arrange
+      EventListener loggingListener = new LoggingListener();
+      EventListener emailAlertListener = new EmailAlertListener();
+      var textEditor = new TextEditor();
+      textEditor.SubscribeEventListener(loggingListener);
+      textEditor.SubscribeEventListener(emailAlertListener);
 
+      // TODO
       // Act
 
       // Assert
