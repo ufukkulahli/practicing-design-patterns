@@ -14,8 +14,8 @@ namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies
       textEditor.SubscribeEventListener(loggingListener);
       textEditor.SubscribeEventListener(emailAlertListener);
 
-      // TODO
       // Act
+      textEditor.OpenFile();
 
       // Assert
 
