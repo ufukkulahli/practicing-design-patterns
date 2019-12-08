@@ -11,14 +11,15 @@ namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies
       EventListener loggingListener = new LoggingListener();
       EventListener emailAlertListener = new EmailAlertListener();
       var textEditor = new TextEditor();
-      textEditor.SubscribeEventListener(loggingListener);
-      textEditor.SubscribeEventListener(emailAlertListener);
+      textEditor.SubscribeEventListener("openFile", loggingListener);
+      textEditor.SubscribeEventListener("openFile", emailAlertListener);
 
       // Act
       textEditor.OpenFile();
 
       // Assert
-
+      Assert.Equal("HelloWorld.txt", loggingListener.LastEventData);
+      Assert.Equal("HelloWorld.txt", emailAlertListener.LastEventData);
     }
   }
 }

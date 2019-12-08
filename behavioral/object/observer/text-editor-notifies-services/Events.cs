@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,25 +5,27 @@ namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies
 {
   public sealed class Events
   {
-    private readonly IDictionary<string, EventListener> listeners
-      = new Dictionary<string, EventListener>();
+    private readonly List<KeyValuePair<string, EventListener>> listeners
+      = new List<KeyValuePair<string, EventListener>>();
 
-    public void Subscribe(EventListener listener)
+    public void Subscribe(string eventType, EventListener listener)
     {
-      this.listeners.Add(listener.EventType, listener);
+      this.listeners.Add(new KeyValuePair<string, EventListener>(eventType, listener));
     }
 
-    internal void Notify(string eventData)
+    public void Notify(string eventType, string eventData)
     {
-      var listenersToBeNotified = this.listeners
-                                        .Where(l => l.Key == "open")
-                                        .Select(l=>l.Value)
-                                        .ToList();
-
-      foreach (var listener in listenersToBeNotified)
+      foreach (var listener in ListenersToBeNotified(eventType))
       {
         listener.Notify(eventData);
       }
+    }
+
+    private IEnumerable<EventListener> ListenersToBeNotified(string eventType)
+    {
+      return this.listeners
+                  .Where(l => l.Key == eventType)
+                  .Select(l => l.Value);
     }
   }
 }
