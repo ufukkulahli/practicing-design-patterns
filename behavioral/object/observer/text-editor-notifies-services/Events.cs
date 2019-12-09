@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,6 +20,11 @@ namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies
       {
         listener.Notify(eventData);
       }
+    }
+
+    public void Unsubscribe(string eventType, EventListener eventListener)
+    {
+      this.listeners.Remove(new KeyValuePair<string, EventListener>(eventType, eventListener));
     }
 
     private IEnumerable<EventListener> ListenersToBeNotified(string eventType)
