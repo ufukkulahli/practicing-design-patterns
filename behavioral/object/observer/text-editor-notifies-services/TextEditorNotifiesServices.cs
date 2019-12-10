@@ -41,5 +41,24 @@ namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies
       Assert.Equal("HelloWorld.txt", loggingListener.LastEventData);
       Assert.Equal(string.Empty, emailAlertListener.LastEventData);
     }
+
+    [Fact]
+    public void NotifyOtherServicesWhenOpenAndSaveFileEventOccurs()
+    {
+      // Arrange
+      EventListener loggingListener = new LoggingListener();
+      EventListener emailAlertListener = new EmailAlertListener();
+      var textEditor = new TextEditor();
+      textEditor.SubscribeEventListener("saveFile", loggingListener);
+      textEditor.SubscribeEventListener("openFile", emailAlertListener);
+
+      // Act
+      textEditor.SaveFile();
+      textEditor.OpenFile();
+
+      // Assert
+      Assert.Equal("HelloWorld.txt", loggingListener.LastEventData);
+      Assert.Equal("HelloWorld.txt", emailAlertListener.LastEventData);
+    }
   }
 }
