@@ -2,7 +2,7 @@ using Xunit;
 
 namespace practicing_design_patterns.behavioral.@object.observer.editor_notifies_services
 {
-  public class TextEditorNotifiesServices
+  public class TextEditorNotifiesServicesUnitTests
   {
     [Fact]
     public void NotifyOtherServicesWhenOpenFileEventOccurs()
