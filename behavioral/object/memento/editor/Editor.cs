@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace practicing_design_patterns.behavioral.@object.memento.editor
 {
   public sealed class Editor

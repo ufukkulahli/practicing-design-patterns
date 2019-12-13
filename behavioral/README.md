@@ -15,3 +15,4 @@ Concerned with communication, managing algorithms, relationships responsibilitie
   * [Strategy](object/strategy/README.md)
   * [Visitor](object/visitor/README.md)
   * [Observer](object/observer/README.md)
+  * [Memento](object/memento/README.md)
