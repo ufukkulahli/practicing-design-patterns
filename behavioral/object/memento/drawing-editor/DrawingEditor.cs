@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
@@ -19,6 +20,14 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
       foreach(var shape in shapes)
       {
         this.savedStates.Add(shape.State());
+      }
+    }
+
+    public void Move(IEnumerable<Shape> shapes)
+    {
+      foreach(var shape in shapes)
+      {
+        shape.Move(new Coordinate(50, 50));
       }
     }
   }

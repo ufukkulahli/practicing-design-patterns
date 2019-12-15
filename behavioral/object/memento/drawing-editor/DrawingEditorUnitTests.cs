@@ -19,6 +19,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
       var drawingEditor = new DrawingEditor();
       drawingEditor.DrawShapes(shapes);
       drawingEditor.Save(shapes);
+      drawingEditor.Move(shapes);
 
       // Act
 

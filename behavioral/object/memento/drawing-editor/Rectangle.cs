@@ -13,6 +13,9 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
 
     public void Draw() => DrawingEditorUnitTests.Output.WriteLine(this.ToString());
 
+    public void Move(Coordinate coordinate) =>
+      this.coordinate = this.coordinate.Update(coordinate);
+
     public IState State() => new RectangleState(this);
 
     public override string ToString() =>

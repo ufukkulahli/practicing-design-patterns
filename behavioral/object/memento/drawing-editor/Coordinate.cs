@@ -12,5 +12,6 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
     }
 
     public override string ToString() => this.x + ", " + this.y;
+    public Coordinate Update(Coordinate coordinate) => new Coordinate(coordinate.x, coordinate.y);
   }
 }
