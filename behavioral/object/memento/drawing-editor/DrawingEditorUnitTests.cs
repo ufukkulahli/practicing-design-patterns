@@ -18,6 +18,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
       var shapes = new List<Shape> { rectangle, circle };
       var drawingEditor = new DrawingEditor();
       drawingEditor.DrawShapes(shapes);
+      drawingEditor.Save(shapes);
 
       // Act
 

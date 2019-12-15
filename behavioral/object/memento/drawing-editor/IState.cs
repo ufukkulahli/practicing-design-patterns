@@ -1,8 +1,6 @@
 namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
 {
-  public interface Shape
+  public interface IState
   {
-    void Draw();
-    IState State();
   }
 }

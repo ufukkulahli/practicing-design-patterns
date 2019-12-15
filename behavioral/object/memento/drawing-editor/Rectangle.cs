@@ -13,7 +13,23 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
 
     public void Draw() => DrawingEditorUnitTests.Output.WriteLine(this.ToString());
 
+    public IState State() => new RectangleState(this);
+
     public override string ToString() =>
       "Rectangle with size " + this.size.ToString() + " at " + this.coordinate.ToString();
+
+    private sealed class RectangleState : IState
+    {
+      private Rectangle rectangle;
+      private Size size;
+      private Coordinate coordinate;
+
+      public RectangleState(Rectangle rectangle)
+      {
+        this.rectangle = rectangle;
+        this.size = rectangle.size;
+        this.coordinate = rectangle.coordinate;
+      }
+    }
   }
 }

@@ -13,7 +13,23 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
 
     public void Draw() => DrawingEditorUnitTests.Output.WriteLine(this.ToString());
 
+    public IState State() => new CircleState(this);
+
     public override string ToString() =>
       "Circle with radius " + this.radius.ToString() + " at " + this.coordinate.ToString();
+
+    private sealed class CircleState : IState
+    {
+      private Circle circle;
+      private Radius radius;
+      private Coordinate coordinate;
+
+      public CircleState(Circle circle)
+      {
+        this.circle = circle;
+        this.radius = circle.radius;
+        this.coordinate = circle.coordinate;
+      }
+    }
   }
 }
