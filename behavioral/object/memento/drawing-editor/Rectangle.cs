@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
 {
   public sealed class Rectangle : Shape
@@ -35,6 +32,12 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
         this.rectangle = rectangle;
         this.size = rectangle.size;
         this.coordinate = rectangle.coordinate;
+      }
+
+      public void RestoreSelf()
+      {
+        this.rectangle.size = this.size;
+        this.rectangle.coordinate = this.coordinate;
       }
     }
 

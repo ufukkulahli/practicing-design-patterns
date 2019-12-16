@@ -33,6 +33,12 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
         this.radius = circle.radius;
         this.coordinate = circle.coordinate;
       }
+
+      public void RestoreSelf()
+      {
+        this.circle.radius = this.radius;
+        this.circle.coordinate = this.coordinate;
+      }
     }
 
     public string Coordinate() => this.coordinate.ToString();

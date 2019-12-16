@@ -30,9 +30,11 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
       Assert.Equal("50, 50", rectangle.Coordinate());
 
       // Act
+      drawingEditor.RestoreShapesToLastPlaces();
 
       // Assert
-
+      Assert.Equal("20, 20", circle.Coordinate());
+      Assert.Equal("10, 10", rectangle.Coordinate());
     }
   }
 }
