@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
 {
   public sealed class Rectangle : Shape
@@ -34,5 +37,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
         this.coordinate = rectangle.coordinate;
       }
     }
+
+    public string Coordinate() => this.coordinate.ToString();
   }
 }

@@ -34,5 +34,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
         this.coordinate = circle.coordinate;
       }
     }
+
+    public string Coordinate() => this.coordinate.ToString();
   }
 }
