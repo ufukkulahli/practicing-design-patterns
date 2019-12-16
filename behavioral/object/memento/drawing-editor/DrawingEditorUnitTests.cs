@@ -23,7 +23,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
       Assert.Equal("10, 10", rectangle.Coordinate());
       
       // (Save the current place of shapes)
-      drawingEditor.Save(shapes);
+      drawingEditor.SavePlacesOf(shapes);
       
       drawingEditor.Move(shapes);
       Assert.Equal("50, 50", circle.Coordinate());

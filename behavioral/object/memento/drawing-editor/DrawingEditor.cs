@@ -15,7 +15,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.drawing_editor
       }
     }
 
-    public void Save(IEnumerable<Shape> shapes)
+    public void SavePlacesOf(IEnumerable<Shape> shapes)
     {
       foreach(var shape in shapes)
       {
