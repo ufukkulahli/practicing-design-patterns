@@ -112,3 +112,4 @@ Deals with class relationships that can be changed at compile time.
 
   * [Memento](behavioral/object/memento/README.md)
     * [Editor](behavioral/object/memento/editor/EditorUnitTests.cs)
+    * [Drawing editor](behavioral/object/memento/drawing-editor/DrawingEditorUnitTests.cs)
