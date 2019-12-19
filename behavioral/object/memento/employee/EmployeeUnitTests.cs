@@ -1,7 +1,10 @@
+using Xunit;
+
 namespace practicing_design_patterns.behavioral.@object.memento.employee
 {
   public class EmployeeUnitTests
   {
+    [Fact]
     public void SavesAndRestoresEmployeesPersonalInfo()
     {
       // Arrange
@@ -13,10 +16,15 @@ namespace practicing_design_patterns.behavioral.@object.memento.employee
       var employeeHistory = new EmployeeHistory();
       employeeHistory.Save(joe);
 
+      // (Update Joe's phone)
+      joe.Phone = "1112223344";
+      Assert.Equal("1112223344", joe.Phone);
+
       // Act
+      employeeHistory.RevertChangesToPrior(joe);
 
       // Assert
-
+      Assert.Equal("5554443322", joe.Phone);
     }
   }
 }
