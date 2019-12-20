@@ -10,7 +10,7 @@ namespace practicing_design_patterns.behavioral.@object.memento.employee
     public void Save(Employee joe) =>
       this.employeeHistory.Push(joe.Memento());
 
-    public void RevertChangesToPrior(Employee employee) =>
+    public void RevertChangesToPriorOf(Employee employee) =>
       employee.RevertInfoChanges(this.employeeHistory.Pop());
   }
 }
