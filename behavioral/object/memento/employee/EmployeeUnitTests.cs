@@ -47,8 +47,10 @@ namespace practicing_design_patterns.behavioral.@object.memento.employee
       Assert.Equal("0009998877", jack.Phone);
 
       // Act
-      employeeHistory.RevertChangesToPriorOf(joe);
+      // (Employee history is not able to manage multiple employees well though)
+      // (So that, last in first outs)
       employeeHistory.RevertChangesToPriorOf(jack);
+      employeeHistory.RevertChangesToPriorOf(joe);
 
       // Assert
       Assert.Equal("5554443322", joe.Phone);
