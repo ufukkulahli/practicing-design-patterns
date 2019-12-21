@@ -7,8 +7,8 @@ namespace practicing_design_patterns.behavioral.@object.memento.employee
     private readonly Stack<EmployeeMemento> employeeHistory =
       new Stack<EmployeeMemento>();
 
-    public void Save(Employee joe) =>
-      this.employeeHistory.Push(joe.Memento());
+    public void Save(Employee employee) =>
+      this.employeeHistory.Push(employee.Memento());
 
     public void RevertChangesToPriorOf(Employee employee) =>
       employee.RevertInfoChanges(this.employeeHistory.Pop());
