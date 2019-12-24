@@ -4,5 +4,6 @@ namespace practicing_design_patterns.structural.@object.bridge.product
   {
     private IState state;
     public Tv(IState state) => this.state = state;
+    public override string ChangeState() => this.state.Change();
   }
 }

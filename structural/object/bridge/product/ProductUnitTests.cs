@@ -5,17 +5,17 @@ namespace practicing_design_patterns.structural.@object.bridge.product
   public class ProductUnitTests
   {
     [Fact]
-    public void Test()
+    public void ChangesTvsStateToOnState()
     {
       // Arrange
       IState on = new OnState();
       Product tv = new Tv(on);
-      // TODO
 
       // Act
+      var theStateOfTv = tv.ChangeState();
 
       // Assert
-
+      Assert.Equal("Current device's state is ON now.", theStateOfTv);
     }
   }
 }
