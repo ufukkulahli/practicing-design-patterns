@@ -30,5 +30,21 @@ namespace practicing_design_patterns.structural.@object.bridge.product
       // Assert
       Assert.Equal("Current device's state is OFF now.", theStateOfTv);
     }
+
+    [Fact]
+    public void TurnsOnAndThenTurnsOffTheTv()
+    {
+      // Arrange
+      IState on = new OnState();
+      Product tv = new Tv(on);
+
+      // Act
+      var theStateOfTv = tv.ChangeState();
+      Assert.Equal("Current device's state is ON now.", theStateOfTv);
+
+      // Assert
+      var theStateOfTvIsOff = tv.ChangeState(new OffState());
+      Assert.Equal("Current device's state is OFF now.", theStateOfTvIsOff);
+    }
   }
 }
