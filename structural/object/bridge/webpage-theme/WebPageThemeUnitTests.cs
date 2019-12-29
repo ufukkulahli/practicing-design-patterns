@@ -14,7 +14,7 @@ namespace practicing_design_patterns.structural.@object.bridge.webpage_theme
       var homePageContent = homePage.Content();
 
       // Assert
-      Assert.Equal("You are viewing home page in default theme which is light", homePageContent);
+      Assert.Equal("You are viewing home page in default theme which is: Light", homePageContent);
     }
   }
 }
