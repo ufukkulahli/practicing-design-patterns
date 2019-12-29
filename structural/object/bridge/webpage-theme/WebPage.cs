@@ -1,7 +1,7 @@
 namespace practicing_design_patterns.structural.@object.bridge.webpage_theme
 {
-  public interface IWebPage
+  public abstract class WebPage
   {
-    string Content();
+    public virtual string Content() => string.Empty;
   }
 }

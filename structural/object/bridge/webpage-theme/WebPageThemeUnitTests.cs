@@ -8,7 +8,7 @@ namespace practicing_design_patterns.structural.@object.bridge.webpage_theme
     public void HomePagesDefaultThemeIsLight()
     {
       // Arrange
-      IWebPage homePage = new HomePage();
+      WebPage homePage = new HomePage();
 
       // Act
       var homePageContent = homePage.Content();
