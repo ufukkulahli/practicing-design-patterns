@@ -18,7 +18,7 @@ namespace practicing_design_patterns.structural.@object.bridge.webpage_theme
     }
 
     [Fact]
-    public void HomePagesThemeIsDark()
+    public void HomePagesThemeIsDarkAndAboutPageIsLight()
     {
       // Arrange
       WebPage homePage = new HomePage(new DarkTheme());
