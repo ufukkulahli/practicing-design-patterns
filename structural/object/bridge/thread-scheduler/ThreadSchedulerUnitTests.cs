@@ -17,5 +17,19 @@ namespace practicing_design_patterns.structural.@object.bridge.thread_scheduler
       // Assert
       Assert.True(started);
     }
+
+    [Fact]
+    public void TimeSlicedThreadSchedulerForWindowsImplementation()
+    {
+      // Arrange
+      OSSpecificThreadScheduler ossts = new WindowsTS();
+      ThreadScheduler ts = new TimeSlicedThreadScheduler(ossts);
+
+      // Act
+      var started = ts.Start();
+
+      // Assert
+      Assert.True(started);
+    }
   }
 }
