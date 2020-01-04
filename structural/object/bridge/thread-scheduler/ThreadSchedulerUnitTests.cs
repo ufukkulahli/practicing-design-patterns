@@ -31,5 +31,19 @@ namespace practicing_design_patterns.structural.@object.bridge.thread_scheduler
       // Assert
       Assert.True(started);
     }
+
+    [Fact]
+    public void TimeSlicedThreadSchedulerForLinuxImplementation()
+    {
+      // Arrange
+      OSSpecificThreadScheduler ossts = new LinuxTS();
+      ThreadScheduler ts = new TimeSlicedThreadScheduler(ossts);
+
+      // Act
+      var started = ts.Start();
+
+      // Assert
+      Assert.False(started);
+    }
   }
 }
