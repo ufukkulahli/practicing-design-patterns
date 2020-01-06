@@ -57,6 +57,8 @@ Deals with class relationships that can be changed at compile time.
   
   * [Bridge](structural/object/bridge/README.md)
     * [Product](structural/object/bridge/product/ProductUnitTests.cs)
+    * [Web page theme](structural/object/bridge/webpage-theme/WebPageThemeUnitTests.cs)
+    * [Thread scheduler](structural/object/bridge/thread-scheduler/ThreadSchedulerUnitTests.cs)
 
 ## [Behavioral](behavioral/README.md)
 

@@ -6,3 +6,5 @@ The bridge allows that two classes grow side by side without introducing complex
 Examples
 
 * [Product](product/ProductUnitTests.cs)
+* [Web page theme](webpage-theme/WebPageThemeUnitTests.cs)
+* [Thread scheduler](thread-scheduler/ThreadSchedulerUnitTests.cs)

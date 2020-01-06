@@ -7,6 +7,7 @@ We use these patterns to form large object structures between many disparate obj
 
 * [Adapter(class)](class/adapter/README.md)
 * [Adapter(object)](object/adapter/README.md)
+* [Bridge](object/bridge/README.md)
 * [Composite](object/composite/README.md)
 * [Decorator](object/decorator/README.md)
 * [Facade](object/facade/README.md)
