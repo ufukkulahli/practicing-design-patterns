@@ -13,6 +13,6 @@ namespace practicing_design_patterns.structural.@object.flyweight.company
     }
 
     public string Name { get=>this.name; }
-    public string Agreement { get=>this.agreement; }
+    public string Agreement { get=> CompanyFlyweight.Agreement; }
   }
 }

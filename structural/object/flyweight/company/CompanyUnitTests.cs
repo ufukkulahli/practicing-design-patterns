@@ -12,9 +12,7 @@ namespace practicing_design_patterns.structural.@object.flyweight.company
 
       // Act && Assert
       Assert.Equal("Orange", orangeCompany.Name);
-      //TODO
-      //Assert.Equal("A huge agreement file", orangeCompany.Agreement);
-      Assert.Equal("", orangeCompany.Agreement);
+      Assert.Equal("A huge agreement file", orangeCompany.Agreement);
     }
   }
 }
