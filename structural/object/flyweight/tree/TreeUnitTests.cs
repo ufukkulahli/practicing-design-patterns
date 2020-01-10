@@ -8,11 +8,13 @@ namespace practicing_design_patterns.structural.@object.flyweight.tree
     public void CreatesLightweightTrees()
     {
       // Arrange
+      var forest = new Forest();
 
       // Act
+      forest.GrowTrees(new TreeCanvas());
 
       // Assert
-
+      Assert.True(true);
     }
   }
 }
