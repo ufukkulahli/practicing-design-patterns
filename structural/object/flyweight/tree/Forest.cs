@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace practicing_design_patterns.structural.@object.flyweight.tree
 {
@@ -17,5 +18,7 @@ namespace practicing_design_patterns.structural.@object.flyweight.tree
         tree.Grow(treeCanvas);
       }
     }
+
+    public int TreeCount() => this.trees.Where(tree => tree.Grew).Count();
   }
 }
