@@ -14,7 +14,7 @@ namespace practicing_design_patterns.structural.@object.flyweight.tree
       forest.GrowTrees(new TreeCanvas());
 
       // Assert
-      Assert.Equal(0, forest.TreeCount());
+      Assert.Equal(3, forest.TreeCount());
     }
   }
 }
