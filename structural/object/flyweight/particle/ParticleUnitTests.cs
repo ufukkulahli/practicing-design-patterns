@@ -1,16 +1,20 @@
+using Xunit;
+
 namespace practicing_design_patterns.structural.@object.flyweight.particle
 {
   public class ParticleUnitTests
   {
-    public void Test()
+    [Fact]
+    public void CreatesParticles()
     {
       // Arrange
-      var particle = new Particle();
+      var game = new Game();
 
       // Act
+      game.DrawParticles();
 
       // Assert
-
+      Assert.True(true);
     }
   }
 }
