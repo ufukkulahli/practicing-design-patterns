@@ -14,6 +14,10 @@ namespace practicing_design_patterns.structural.@object.flyweight.particle
 
     public void DrawParticles()
     {
+      foreach(var particle in this.particles)
+      {
+        particle.DrawSelf();
+      }
     }
   }
 }

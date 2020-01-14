@@ -10,5 +10,6 @@ namespace practicing_design_patterns.structural.@object.flyweight.particle
       this.color = color;
       this.spriteFile = spriteFile;
     }
+    public override string ToString() => $"{this.color},{this.spriteFile}";
   }
 }
