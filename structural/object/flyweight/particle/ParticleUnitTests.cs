@@ -14,7 +14,7 @@ namespace practicing_design_patterns.structural.@object.flyweight.particle
       game.DrawParticles();
 
       // Assert
-      Assert.True(true);
+      Assert.Equal(1, game.ParticleCount());
     }
   }
 }

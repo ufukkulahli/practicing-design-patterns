@@ -14,7 +14,7 @@ namespace practicing_design_patterns.structural.@object.flyweight.particle
 
     public void DrawSelf()
     {
-      this.drawInfo = $"{this.randomPosition.ToString()} at {this.particleFlyweight.ToString()}";
+      this.drawInfo = $"{this.particleFlyweight.ToString()} at {this.randomPosition.ToString()}";
     }
 
     public string DrawInfo() => this.drawInfo;

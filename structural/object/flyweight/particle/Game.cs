@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace practicing_design_patterns.structural.@object.flyweight.particle
 {
@@ -19,5 +20,7 @@ namespace practicing_design_patterns.structural.@object.flyweight.particle
         particle.DrawSelf();
       }
     }
+
+    public int ParticleCount() => this.particles.Count();
   }
 }
