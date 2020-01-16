@@ -10,6 +10,9 @@ namespace practicing_design_patterns.structural.@object.flyweight.particle
     public Game()
     {
       var particleFlyweight = new ParticleFlyWeight("silver", "particle_sprite.png");
+
+      this.particles.Add(new Particle(new RandomPosition(), particleFlyweight));
+      this.particles.Add(new Particle(new RandomPosition(), particleFlyweight));
       this.particles.Add(new Particle(new RandomPosition(), particleFlyweight));
     }
 
