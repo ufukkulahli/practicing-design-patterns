@@ -30,7 +30,7 @@ namespace practicing_design_patterns.structural.@object.bridge.webpage_theme
 
       // Assert
       Assert.Equal("You are viewing home page in default theme which is: Dark", homePageContent);
-      Assert.Equal("You are viewing home page in default theme which is: Light", aboutPageContent);
+      Assert.Equal("You are viewing about page in default theme which is: Light", aboutPageContent);
     }
 
     [Fact]
