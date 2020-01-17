@@ -54,11 +54,16 @@ Deals with class relationships that can be changed at compile time.
     * [Cached file](structural/object/proxy/cached-file/CachedFileUnitTests.cs)
     * [Logging](structural/object/proxy/logging/LoggingUnitTests.cs)
     * [Authentication](structural/object/proxy/logging/LoggingUnitTests.cs)
-  
+
   * [Bridge](structural/object/bridge/README.md)
     * [Product](structural/object/bridge/product/ProductUnitTests.cs)
     * [Web page theme](structural/object/bridge/webpage-theme/WebPageThemeUnitTests.cs)
     * [Thread scheduler](structural/object/bridge/thread-scheduler/ThreadSchedulerUnitTests.cs)
+
+  * [Flyweight](structural/object/flyweight/README.md)
+    * [Company](structural/object/flyweight/company/CompanyUnitTests.cs)
+    * [Tree](structural/object/flyweight/tree/TreeUnitTests.cs)
+    * [Particle](structural/object/flyweight/particle/ParticleUnitTests.cs)
 
 ## [Behavioral](behavioral/README.md)
 

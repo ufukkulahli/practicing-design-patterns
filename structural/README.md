@@ -1,8 +1,8 @@
 # Structural patterns
 
-These patterns are about `class` and `object` composition.  
-Structural class-creation patterns use inheritance to compose interfaces.  
-Structural object-patterns define ways to compose objects to obtain new functionality.  
+These patterns are about `class` and `object` composition.
+Structural class-creation patterns use inheritance to compose interfaces.
+Structural object-patterns define ways to compose objects to obtain new functionality.
 We use these patterns to form large object structures between many disparate objects.
 
 * [Adapter(class)](class/adapter/README.md)
@@ -11,4 +11,5 @@ We use these patterns to form large object structures between many disparate obj
 * [Composite](object/composite/README.md)
 * [Decorator](object/decorator/README.md)
 * [Facade](object/facade/README.md)
+* [Flyweight](object/flyweight/README.md)
 * [Proxy](object/proxy/README.md)
