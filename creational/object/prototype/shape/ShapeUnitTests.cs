@@ -5,7 +5,7 @@ namespace practicing_design_patterns.creational.@object.prototype.shape
   public class ShapeUnitTests
   {
     [Fact]
-    public void Test()
+    public void ClonesCircle()
     {
       // Arrange
       var circle = new Circle();
@@ -14,9 +14,16 @@ namespace practicing_design_patterns.creational.@object.prototype.shape
       circle.Radius = 10;
 
       // Act
+      var brandNewCircle = circle.Clone() as Circle;
 
       // Assert
-      Assert.True(true);
+      Assert.Equal(5, circle.X);
+      Assert.Equal(5, circle.Y);
+      Assert.Equal(10, circle.Radius);
+
+      Assert.Equal(5, brandNewCircle.X);
+      Assert.Equal(5, brandNewCircle.Y);
+      Assert.Equal(10, brandNewCircle.Radius);
     }
   }
 }
