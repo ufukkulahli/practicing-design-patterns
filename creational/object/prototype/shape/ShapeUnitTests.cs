@@ -8,6 +8,7 @@ namespace practicing_design_patterns.creational.@object.prototype.shape
     public void Test()
     {
       // Arrange
+      var circle = new Circle();
 
       // Act
 
