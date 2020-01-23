@@ -50,5 +50,24 @@ namespace practicing_design_patterns.creational.@object.prototype.shape
       Assert.Equal(10, brandNewCircle.Y);
       Assert.Equal(20, brandNewCircle.Radius);
     }
+
+    [Fact]
+    public void ClonesRectangle()
+    {
+      // Arrange
+      var rectangle = new Rectangle();
+      rectangle.X = 5;
+      rectangle.Y = 5;
+
+      // Act
+      var brandNewRectangle = rectangle.Clone() as Rectangle;
+
+      // Assert
+      Assert.Equal(5, rectangle.X);
+      Assert.Equal(5, rectangle.Y);
+
+      Assert.Equal(5, brandNewRectangle.X);
+      Assert.Equal(5, brandNewRectangle.Y);
+    }
   }
 }
