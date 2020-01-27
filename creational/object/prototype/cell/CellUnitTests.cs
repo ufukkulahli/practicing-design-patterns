@@ -8,11 +8,13 @@ namespace practicing_design_patterns.creational.@object.prototype.cell
     public void CellSplitsItself()
     {
       // Arrange
+      var singleCellOrganism = new SingleCellOrganism();
 
       // Act
+      var newCell = singleCellOrganism.Split();
 
       // Assert
-      Assert.True(true);
+      Assert.True(newCell.Alive);
     }
   }
 }
