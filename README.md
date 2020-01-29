@@ -21,11 +21,13 @@ Deals with class relationships that can be changed at compile time.
     * [Button](creational/object/abstract-factory/button/ButtonUnitTests.cs)
     * [Furniture](creational/object/abstract-factory/furniture/FurnitureUnitTests.cs)
 
-  * [Prototype](creational/README.md)
+  * [Prototype](creational/object/prototype/README.md)
     * [Cell](creational/object/prototype/cell/CellUnitTests.cs)
     * [Robot](creational/object/prototype/robot/RobotUnitTests.cs)
     * [Shape](creational/object/prototype/shape/ShapeUnitTests.cs)
     * [Sheep](creational/object/prototype/sheep/SheepUnitTests.cs)
+
+  * [Builder](creational/object/builder/README.md)
 
 ## [Structural](structural/README.md)
 
