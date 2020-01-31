@@ -15,7 +15,7 @@ namespace practicing_design_patterns.creational.@object.builder.house
         .BuildWalls(new Wood())
         .BuildWindows(new Wood())
         .BuildDoor(new Wood())
-        ;
+        .BuildRoof(new Wood());
 
       // Assert
       Assert.True(true);
