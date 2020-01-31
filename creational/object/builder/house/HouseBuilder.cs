@@ -1,3 +1,5 @@
+using System;
+
 namespace practicing_design_patterns.creational.@object.builder.house
 {
   public sealed class HouseBuilder
@@ -7,28 +9,33 @@ namespace practicing_design_patterns.creational.@object.builder.house
     private IMaterial doorMaterial;
     private IMaterial roofMaterial;
 
-    public HouseBuilder BuildWalls(IMaterial material)
+    public HouseBuilder Walls(IMaterial material)
     {
       this.wallMaterial = material;
       return this;
     }
 
-    public HouseBuilder BuildWindows(IMaterial material)
+    public HouseBuilder Windows(IMaterial material)
     {
       this.windowMaterial = material;
       return this;
     }
 
-    public HouseBuilder BuildDoor(IMaterial material)
+    public HouseBuilder Door(IMaterial material)
     {
       this.doorMaterial = material;
       return this;
     }
 
-    public HouseBuilder BuildRoof(IMaterial material)
+    public HouseBuilder Roof(IMaterial material)
     {
       this.roofMaterial = material;
       return this;
+    }
+
+    public House Build()
+    {
+      throw new NotImplementedException();
     }
   }
 }
