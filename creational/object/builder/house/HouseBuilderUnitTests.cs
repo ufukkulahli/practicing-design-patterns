@@ -11,6 +11,7 @@ namespace practicing_design_patterns.creational.@object.builder.house
       var houseBuilder = new HouseBuilder();
 
       // Act
+      houseBuilder.BuildWalls(new Wood());
 
       // Assert
       Assert.True(true);
