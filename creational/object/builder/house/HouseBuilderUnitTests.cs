@@ -5,7 +5,7 @@ namespace practicing_design_patterns.creational.@object.builder.house
   public class HouseBuilderUnitTests
   {
     [Fact]
-    public void BuildsHouse()
+    public void BuildsWoodenHouse()
     {
       // Arrange
       var houseBuilder = new HouseBuilder();
@@ -19,7 +19,11 @@ namespace practicing_design_patterns.creational.@object.builder.house
                           .Build();
 
       // Assert
-      Assert.NotNull(woodenHouse);
+      Assert.Equal
+      (
+        "Wall is wooden material. Window is wooden material. Door is wooden material. Roof is wooden material.",
+        woodenHouse.MadeFrom()
+      );
     }
   }
 }

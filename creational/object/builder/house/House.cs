@@ -21,28 +21,34 @@ namespace practicing_design_patterns.creational.@object.builder.house
       this.roof = new Roof(roofMaterial);
     }
 
+    public string MadeFrom() => $"{wall.ToString()} {window.ToString()} {door.ToString()} {roof.ToString()}";
+
     private sealed class Wall
     {
       private IMaterial wallMaterial;
       public Wall(IMaterial wallMaterial) => this.wallMaterial = wallMaterial;
+      public override string ToString() => $"Wall is {this.wallMaterial.Definition}.";
     }
 
     private sealed class Window
     {
       private IMaterial windowMaterial;
       public Window(IMaterial windowMaterial) => this.windowMaterial = windowMaterial;
+      public override string ToString() => $"Window is {this.windowMaterial.Definition}.";
     }
 
     private sealed class Door
     {
       private IMaterial doorMaterial;
       public Door(IMaterial doorMaterial) => this.doorMaterial = doorMaterial;
+      public override string ToString() => $"Door is {this.doorMaterial.Definition}.";
     }
 
     private sealed class Roof
     {
       private IMaterial roofMaterial;
       public Roof(IMaterial roofMaterial) => this.roofMaterial = roofMaterial;
+      public override string ToString() => $"Roof is {this.roofMaterial.Definition}.";
     }
   }
 }
