@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace practicing_design_patterns.creational.@object.builder.house
@@ -12,14 +11,15 @@ namespace practicing_design_patterns.creational.@object.builder.house
       var houseBuilder = new HouseBuilder();
 
       // Act
-      houseBuilder
-        .Walls(new Wood())
-        .Windows(new Wood())
-        .Door(new Wood())
-        .Roof(new Wood());
+      var woodenHouse = houseBuilder
+                          .Walls(new Wood())
+                          .Windows(new Wood())
+                          .Door(new Wood())
+                          .Roof(new Wood())
+                          .Build();
 
       // Assert
-      Assert.Throws<NotImplementedException>(() => houseBuilder.Build());
+      Assert.NotNull(woodenHouse);
     }
   }
 }

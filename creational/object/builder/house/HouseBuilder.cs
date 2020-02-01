@@ -1,5 +1,3 @@
-using System;
-
 namespace practicing_design_patterns.creational.@object.builder.house
 {
   public sealed class HouseBuilder
@@ -33,9 +31,6 @@ namespace practicing_design_patterns.creational.@object.builder.house
       return this;
     }
 
-    public House Build()
-    {
-      throw new NotImplementedException();
-    }
+    public House Build() => new House(wallMaterial, windowMaterial, doorMaterial, roofMaterial);
   }
 }
