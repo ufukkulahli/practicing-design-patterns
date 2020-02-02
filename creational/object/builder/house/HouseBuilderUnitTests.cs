@@ -25,5 +25,27 @@ namespace practicing_design_patterns.creational.@object.builder.house
         woodenHouse.MadeFrom()
       );
     }
+
+    [Fact]
+    public void BuildsStoneHouse()
+    {
+      // Arrange
+      var houseBuilder = new HouseBuilder();
+
+      // Act
+      var stoneHouse = houseBuilder
+                          .Walls(new Stone())
+                          .Windows(new Wood())
+                          .Door(new Wood())
+                          .Roof(new Stone())
+                          .Build();
+
+      // Assert
+      Assert.Equal
+      (
+        "Wall is stone material. Window is wooden material. Door is wooden material. Roof is stone material.",
+        stoneHouse.MadeFrom()
+      );
+    }
   }
 }
