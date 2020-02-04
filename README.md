@@ -28,6 +28,7 @@ Deals with class relationships that can be changed at compile time.
     * [Sheep](creational/object/prototype/sheep/SheepUnitTests.cs)
 
   * [Builder](creational/object/builder/README.md)
+    *[house](creational/object/builder/house/HouseBuilderUnitTests.cs)
 
 ## [Structural](structural/README.md)
 
