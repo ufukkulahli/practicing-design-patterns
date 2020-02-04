@@ -8,6 +8,7 @@ namespace practicing_design_patterns.creational.@object.builder.computer
     public void BuildsCustomComputer()
     {
       // Arrange
+      var computerBuilder = new ComputerBuilder();
 
       // Act
 
