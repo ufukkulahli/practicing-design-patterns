@@ -6,6 +6,7 @@ namespace practicing_design_patterns.creational.@object.builder.computer
     private IMotherboard motherboard;
     private IRam ram;
     private IGraphicsCard graphicsCard;
+    private IHardDiskDrive hdd;
 
     public Computer Build() => throw new NotImplementedException();
 
@@ -20,7 +21,13 @@ namespace practicing_design_patterns.creational.@object.builder.computer
       this.ram = ram;
       return this;
     }
-    
+
+    public ComputerBuilder HardDiskDrive(IHardDiskDrive hdd)
+    {
+      this.hdd = hdd;
+      return this;
+    }
+
     public ComputerBuilder GraphicsCard(IGraphicsCard graphicsCard)
     {
       this.graphicsCard = graphicsCard;
