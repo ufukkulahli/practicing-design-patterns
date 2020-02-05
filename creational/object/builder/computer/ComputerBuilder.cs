@@ -4,8 +4,11 @@ namespace practicing_design_patterns.creational.@object.builder.computer
 {
   public sealed class ComputerBuilder
   {
-    public ComputerBuilder Motherboard()
+    private IMotherboard motherboard;
+
+    public ComputerBuilder Motherboard(IMotherboard motherboard)
     {
+      this.motherboard = motherboard;
       return this;
     }
 

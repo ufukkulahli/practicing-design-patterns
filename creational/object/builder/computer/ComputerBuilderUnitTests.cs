@@ -13,7 +13,7 @@ namespace practicing_design_patterns.creational.@object.builder.computer
 
       // Act
       var computer = computerBuilder
-                        .Motherboard();
+                        .Motherboard(new OEMMotherboard());
 
       // Assert
       Assert.Throws<NotImplementedException>(() => computer.Build());
