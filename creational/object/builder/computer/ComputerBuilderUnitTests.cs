@@ -14,7 +14,8 @@ namespace practicing_design_patterns.creational.@object.builder.computer
       // Act
       var computer = computerBuilder
                         .Motherboard(new OEMMotherboard())
-                        .Ram(new OEMRam("16GB"));
+                        .Ram(new OEMRam("16GB"))
+                        .GraphicsCard(new OEMGraphicsCard("8GB"));
 
       // Assert
       Assert.Throws<NotImplementedException>(() => computer.Build());
