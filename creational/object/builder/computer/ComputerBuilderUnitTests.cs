@@ -16,7 +16,8 @@ namespace practicing_design_patterns.creational.@object.builder.computer
                         .Motherboard(new OEMMotherboard())
                         .Ram(new OEMRam("16GB"))
                         .GraphicsCard(new OEMGraphicsCard("8GB"))
-                        .HardDiskDrive(new OEMHDD("1TB"));
+                        .HardDiskDrive(new OEMHDD("1TB"))
+                        .CPU(new Intel("i7"));
 
       // Assert
       Assert.Throws<NotImplementedException>(() => computer.Build());
