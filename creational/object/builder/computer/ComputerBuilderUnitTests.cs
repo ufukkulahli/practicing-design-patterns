@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace practicing_design_patterns.creational.@object.builder.computer
@@ -11,9 +12,11 @@ namespace practicing_design_patterns.creational.@object.builder.computer
       var computerBuilder = new ComputerBuilder();
 
       // Act
+      var computer = computerBuilder
+                        .Motherboard();
 
       // Assert
-      Assert.True(true);
+      Assert.Throws<NotImplementedException>(() => computer.Build());
     }
   }
 }
