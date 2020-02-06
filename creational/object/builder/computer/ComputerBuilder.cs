@@ -1,4 +1,3 @@
-using System;
 namespace practicing_design_patterns.creational.@object.builder.computer
 {
   public sealed class ComputerBuilder
@@ -9,7 +8,7 @@ namespace practicing_design_patterns.creational.@object.builder.computer
     private IHardDiskDrive hdd;
     private ICPU cpu;
 
-    public Computer Build() => throw new NotImplementedException();
+    public Computer Build() => new Computer(motherboard, ram, graphicsCard, hdd, cpu);
 
     public ComputerBuilder Motherboard(IMotherboard motherboard)
     {
