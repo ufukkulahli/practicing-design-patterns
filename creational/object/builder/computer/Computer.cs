@@ -23,5 +23,15 @@ namespace practicing_design_patterns.creational.@object.builder.computer
       this.hdd = hdd;
       this.cpu = cpu;
     }
+
+    public string HardwareInfo()
+    {
+      return
+          this.motherboard.Info() + ", " +
+          this.ram.Size() + " RAM, " +
+          this.graphicsCard.Size() + " graphics card, " +
+          this.hdd.Size() + " HDD, " +
+          this.cpu.Info();
+    }
   }
 }

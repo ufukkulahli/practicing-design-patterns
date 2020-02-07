@@ -20,7 +20,7 @@ namespace practicing_design_patterns.creational.@object.builder.computer
                         .Build();
 
       // Assert
-      Assert.NotNull(computer);
+      Assert.Equal("OEMMotherboard, 16GB RAM, 8GB graphics card, 1TB HDD, Intel i7", computer.HardwareInfo());
     }
   }
 }
