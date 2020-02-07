@@ -4,5 +4,6 @@ namespace practicing_design_patterns.creational.@object.builder.computer
   {
     private string model;
     public CPU(string model) => this.model = model;
+    public string Info() => this.model;
   }
 }
