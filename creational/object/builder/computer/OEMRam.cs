@@ -4,5 +4,6 @@ namespace practicing_design_patterns.creational.@object.builder.computer
   {
     private string size;
     public OEMRam(string size) => this.size = size;
+    public string Size() => this.size;
   }
 }

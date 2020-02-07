@@ -4,5 +4,6 @@ namespace practicing_design_patterns.creational.@object.builder.computer
   {
     private string memorySize;
     public OEMGraphicsCard(string memorySize) => this.memorySize = memorySize;
+    public string Size() => this.memorySize;
   }
 }
