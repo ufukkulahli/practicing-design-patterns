@@ -8,6 +8,7 @@ namespace practicing_design_patterns.creational.@object.builder.car
     public void BuildsRegularCar()
     {
       // Arrange
+      var renaultBuilder = new RenaultBuilder();
 
       // Act
 
