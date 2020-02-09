@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace practicing_design_patterns.creational.@object.builder.car
@@ -12,9 +13,11 @@ namespace practicing_design_patterns.creational.@object.builder.car
       var regularCarBuildDirector = new RegularCarBuildDirector(renaultBuilder);
 
       // Act
+      // TODO
 
       // Assert
-      Assert.True(true);
+      Assert.Throws<NotImplementedException>(() => regularCarBuildDirector.Construct());
+      Assert.Throws<NotImplementedException>(() => renaultBuilder.TheBuiltCar());
     }
   }
 }
