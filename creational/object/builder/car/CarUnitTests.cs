@@ -13,11 +13,11 @@ namespace practicing_design_patterns.creational.@object.builder.car
       var regularCarBuildDirector = new RegularCarBuildDirector(renaultBuilder);
 
       // Act
-      // TODO
+      var renault = renaultBuilder.TheBuiltCar();
 
       // Assert
       Assert.Throws<NotImplementedException>(() => regularCarBuildDirector.Construct());
-      Assert.Throws<NotImplementedException>(() => renaultBuilder.TheBuiltCar());
+      Assert.NotNull(renault);
     }
   }
 }
