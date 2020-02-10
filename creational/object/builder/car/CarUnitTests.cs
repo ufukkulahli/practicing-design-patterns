@@ -18,6 +18,8 @@ namespace practicing_design_patterns.creational.@object.builder.car
       // Assert
       Assert.Throws<NotImplementedException>(() => regularCarBuildDirector.Construct());
       Assert.NotNull(renault);
+      Assert.Equal(0, renault.Doors());
+      Assert.Equal("", renault.Color());
     }
   }
 }
