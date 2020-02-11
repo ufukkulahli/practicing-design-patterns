@@ -1,5 +1,3 @@
-using System;
-
 namespace practicing_design_patterns.creational.@object.builder.car
 {
   public sealed class RegularCarBuildDirector
@@ -9,7 +7,8 @@ namespace practicing_design_patterns.creational.@object.builder.car
 
     public void Construct()
     {
-      throw new NotImplementedException();
+      this.carBuilder.Color("Black");
+      this.carBuilder.Doors(4);
     }
   }
 }

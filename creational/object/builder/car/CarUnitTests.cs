@@ -13,13 +13,14 @@ namespace practicing_design_patterns.creational.@object.builder.car
       var regularCarBuildDirector = new RegularCarBuildDirector(renaultBuilder);
 
       // Act
+      regularCarBuildDirector.Construct();
       var renault = renaultBuilder.TheBuiltCar();
 
       // Assert
-      Assert.Throws<NotImplementedException>(() => regularCarBuildDirector.Construct());
       Assert.NotNull(renault);
-      Assert.Equal(0, renault.Doors());
-      Assert.Equal("", renault.Color());
+      Assert.Equal(4, renault.Doors());
+      Assert.Equal("Black", renault.Color());
+      Assert.Equal("Renault", renault.Brand());
     }
   }
 }
