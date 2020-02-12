@@ -8,5 +8,10 @@ namespace practicing_design_patterns.creational.@object.builder.car
     {
       this.carBuilder = carBuilder;
     }
+    public void Construct()
+    {
+      this.carBuilder.Color("Silver");
+      this.carBuilder.Doors(2);
+    }
   }
 }
