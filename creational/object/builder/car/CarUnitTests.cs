@@ -27,10 +27,18 @@ namespace practicing_design_patterns.creational.@object.builder.car
     public void BuildsSportsCar()
     {
       // Arrange
+      var porscheBuilder = new PorscheBuilder();
+      var sportsCarBuildDirector = new SportsCarBuildDirector(porscheBuilder);
 
       // Act
+      sportsCarBuildDirector.Construct();
+      var porsche = porscheBuilder.TheBuiltCar();
 
       // Assert
+      Assert.NotNull(porsche);
+      Assert.Equal(2, porsche.Doors());
+      Assert.Equal("Silver", porsche.Color());
+      Assert.Equal("Porsche", porsche.Brand());
     }
   }
 }
