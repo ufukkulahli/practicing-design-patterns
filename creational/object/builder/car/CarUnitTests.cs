@@ -22,5 +22,15 @@ namespace practicing_design_patterns.creational.@object.builder.car
       Assert.Equal("Black", renault.Color());
       Assert.Equal("Renault", renault.Brand());
     }
+
+    [Fact]
+    public void BuildsSportsCar()
+    {
+      // Arrange
+
+      // Act
+
+      // Assert
+    }
   }
 }
