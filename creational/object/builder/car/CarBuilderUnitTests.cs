@@ -1,9 +1,8 @@
-using System;
 using Xunit;
 
 namespace practicing_design_patterns.creational.@object.builder.car
 {
-  public class CarUnitTests
+  public class CarBuilderUnitTests
   {
     [Fact]
     public void BuildsRegularCar()
