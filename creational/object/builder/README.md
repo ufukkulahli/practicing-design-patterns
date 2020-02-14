@@ -6,3 +6,5 @@ Separates the construction of the object from its representation.
 Examples
 
 *[house](house/HouseBuilderUnitTests.cs)
+*[computer](computer/ComputerBuilderUnitTests.cs)
+*[car](car/CarUnitTests.cs)

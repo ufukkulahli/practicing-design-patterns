@@ -29,6 +29,8 @@ Deals with class relationships that can be changed at compile time.
 
   * [Builder](creational/object/builder/README.md)
     *[house](creational/object/builder/house/HouseBuilderUnitTests.cs)
+    *[computer](creational/object/builder/computer/ComputerBuilderUnitTests.cs)
+    *[car](creational/object/builder/car/CarUnitTests.cs)
 
 ## [Structural](structural/README.md)
 
