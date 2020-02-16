@@ -7,5 +7,7 @@ namespace practicing_design_patterns.creational.@object.singleton.connection_str
     private ConnectionString(){}
 
     public static ConnectionString Instance() => instance;
+
+    public string Value() => "database=localhost;user=admin;pass=admin";
   }
 }
