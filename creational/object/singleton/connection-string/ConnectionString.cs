@@ -2,5 +2,10 @@ namespace practicing_design_patterns.creational.@object.singleton.connection_str
 {
   public sealed class ConnectionString
   {
+    private static readonly ConnectionString instance = new ConnectionString();
+
+    private ConnectionString(){}
+
+    public static ConnectionString Instance() => instance;
   }
 }
