@@ -7,12 +7,12 @@ namespace practicing_design_patterns.creational.@object.singleton.database
     [Fact]
     public void CreatesSingleInstanceOfDatabase()
     {
-      // Arrange
-
-      // Act
+      // Arrange & Act
+      var db = Database.Instance();
+      var db2 = Database.Instance();
 
       // Assert
-      Assert.True(true);
+      Assert.True(db.Equals(db2));
     }
   }
 }
