@@ -32,6 +32,10 @@ Deals with class relationships that can be changed at compile time.
     *[computer](creational/object/builder/computer/ComputerBuilderUnitTests.cs)
     *[car](creational/object/builder/car/CarUnitTests.cs)
 
+  * [Singleton](creational/object/singleton/README.md)
+    * [connection string](creational/object/singleton/connection-string/ConnectionStringUnitTests.cs)
+    * [database instance](creational/object/singleton/database/DatabaseUnitTests.cs)
+
 ## [Structural](structural/README.md)
 
 * Class scope
