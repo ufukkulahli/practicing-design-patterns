@@ -37,6 +37,7 @@ namespace practicing_design_patterns.behavioral.@object.iterator.numbers
 
     public void Reset()
     {
+      // TODO: shouldn't be like "this.index = this.numbers.Count-1;" ?
       this.index = this.numbers.Count;
       this.Current = this.numbers[this.index];
     }
